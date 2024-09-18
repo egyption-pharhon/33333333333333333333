@@ -8,7 +8,7 @@ function addproducts(fileName, locationOfProducts){
 
 				
 				data.forEach( product => {
-					if(data.featured){
+					if(product.featured){
 					products.innerHTML += `
 						<div class="box">
 							<div class="image">
