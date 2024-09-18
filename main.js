@@ -25,7 +25,7 @@ function openwindow(){
 function productDelails(id){
 	const activeProduct = allproduct[id]
 
-	const containerOfProductPage = document.querySelector('.product .container')
+	const containerOfProductPage = document.querySelector('.product #container')
 
 	containerOfProductPage.innerHTML += `
  <div class="images">
