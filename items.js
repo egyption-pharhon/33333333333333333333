@@ -3,7 +3,7 @@ function addproducts(fileName, locationOfProducts){
 	fetch('allProducts.json')
 			.then(response => response.json())
 			.then(data => {
-				if(data.fileName){
+				if(data.featured){
 				const products = document.querySelector(locationOfProducts);
 				allproduct =data;
 
@@ -30,8 +30,8 @@ function addproducts(fileName, locationOfProducts){
 				console.log("erro")	
 			}})
 }
-addproducts('featured', '.shop .content');
-addproducts('featured', '.featured .content');
+addproducts("featured", '.shop .content');
+addproducts("featured", '.featured .content');
 addproducts('featured', '.dresses-jumpsuits .content');
 addproducts('featured', '.shoes .content');
 addproducts('featured', '.our-product .content');	
