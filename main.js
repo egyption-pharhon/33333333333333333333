@@ -25,7 +25,7 @@ function openwindow(){
 function productDelails(id){
 	const activeProduct = allproduct[id]
 
-	const containerOfProductPage = document.querySelector('#container')
+	const containerOfProductPage =document.getElementById('container')
 
 	console.log(containerOfProductPage)
 	console.log(activeProduct)
