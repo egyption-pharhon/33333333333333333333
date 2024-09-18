@@ -360,169 +360,169 @@
 	  ]
 	},
 	{
-		"id": 2,
-		"img": "img/shoes/2.jpg",
-		"name": "Shoes",
-		"category": "Shoes",
-		"section": "Shoes",
-		"price": 139.00,
-		"ProductDetails": "Stylish and comfortable shoes for everyday wear.",
-		"productColors": [
-			"img/shoes/1_red.jpg",
-			"img/shoes/1_blue.jpg",
-			"img/shoes/1_black.jpg",
-			"img/shoes/1_white.jpg"
-		]
+	"id": 2,
+	"img": "img/shoes/2.jpg",
+	"name": "Shoes",
+	"category": "Shoes",
+	"section": "Shoes",
+	"price": 139.00,
+	"ProductDetails": "Stylish and comfortable shoes for everyday wear.",
+	"productColors": [
+		"img/shoes/1.jpg",
+		"img/shoes/1.jpg",
+		"img/shoes/1.jpg",
+		"img/shoes/1.jpg"
+	  ]
 	},
 	{
-		"id": 3,
-		"img": "img/shoes/3.jpg",
-		"name": "Shoes",
-		"category": "Shoes",
-		"section": "Shoes",
-		"price": 139.00,
-		"ProductDetails": "Durable shoes designed for active lifestyles.",
-		"productColors": [
-			"img/shoes/2_red.jpg",
-			"img/shoes/2_blue.jpg",
-			"img/shoes/2_black.jpg",
-			"img/shoes/2_white.jpg"
-		]
+	"id": 3,
+	"img": "img/shoes/3.jpg",
+	"name": "Shoes",
+	"category": "Shoes",
+	"section": "Shoes",
+	"price": 139.00,
+	"ProductDetails": "Durable shoes designed for active lifestyles.",
+	"productColors": [
+		"img/shoes/1.jpg",
+		"img/shoes/1.jpg",
+		"img/shoes/1.jpg",
+		"img/shoes/1.jpg"
+	  ]
 	},
 	{
-		"id": 4,
-		"img": "img/shoes/4.jpg",
-		"name": "Shoes",
-		"category": "Shoes",
-		"section": "Shoes",
-		"price": 139.00,
-		"ProductDetails": "Versatile shoes suitable for various occasions.",
-		"productColors": [
-			"img/shoes/3_red.jpg",
-			"img/shoes/3_blue.jpg",
-			"img/shoes/3_black.jpg",
-			"img/shoes/3_white.jpg"
-		]
+	"id": 4,
+	"img": "img/shoes/4.jpg",
+	"name": "Shoes",
+	"category": "Shoes",
+	"section": "Shoes",
+	"price": 139.00,
+	"ProductDetails": "Versatile shoes suitable for various occasions.",
+	"productColors": [
+		"img/shoes/1.jpg",
+		"img/shoes/1.jpg",
+		"img/shoes/1.jpg",
+		"img/shoes/1.jpg"
+	  ]
 	},
 	{
-		"id": 5,
-		"img": "img/clothes/1.jpg",
-		"name": "Dress",
-		"category": "Women / Dress",
-		"section": "Dresses",
-		"price": 139.00,
-		"ProductDetails": "Elegant dress perfect for special occasions.",
-		"productColors": [
-			"img/clothes/1_red.jpg",
-			"img/clothes/1_blue.jpg",
-			"img/clothes/1_black.jpg",
-			"img/clothes/1_white.jpg"
-		]
+	"id": 5,
+	"img": "img/clothes/1.jpg",
+	"name": "Dress",
+	"category": "Women / Dress",
+	"section": "Dresses",
+	"price": 139.00,
+	"ProductDetails": "Elegant dress perfect for special occasions.",
+	"productColors": [
+		"img/shoes/1.jpg",
+		"img/shoes/1.jpg",
+		"img/shoes/1.jpg",
+		"img/shoes/1.jpg"
+	  ]
 	},
 	{
-		"id": 6,
-		"img": "img/clothes/2.jpg",
-		"name": "Dress",
-		"category": "Women / Dress",
-		"section": "Dresses",
-		"price": 139.00,
-		"ProductDetails": "Chic and stylish dress for casual outings.",
-		"productColors": [
-			"img/clothes/2_red.jpg",
-			"img/clothes/2_blue.jpg",
-			"img/clothes/2_black.jpg",
-			"img/clothes/2_white.jpg"
-		]
+	"id": 6,
+	"img": "img/clothes/2.jpg",
+	"name": "Dress",
+	"category": "Women / Dress",
+	"section": "Dresses",
+	"price": 139.00,
+	"ProductDetails": "Chic and stylish dress for casual outings.",
+	"productColors": [
+		"img/shoes/1.jpg",
+		"img/shoes/1.jpg",
+		"img/shoes/1.jpg",
+		"img/shoes/1.jpg"
+	  ]
 	},
 	{
-		"id": 7,
-		"img": "img/clothes/3.jpg",
-		"name": "Dress",
-		"category": "Women / Dress",
-		"section": "Dresses",
-		"price": 139.00,
-		"ProductDetails": "Comfortable dress for everyday wear.",
-		"productColors": [
-			"img/clothes/3_red.jpg",
-			"img/clothes/3_blue.jpg",
-			"img/clothes/3_black.jpg",
-			"img/clothes/3_white.jpg"
-		]
+	"id": 7,
+	"img": "img/clothes/3.jpg",
+	"name": "Dress",
+	"category": "Women / Dress",
+	"section": "Dresses",
+	"price": 139.00,
+	"ProductDetails": "Comfortable dress for everyday wear.",
+	"productColors": [
+		"img/shoes/1.jpg",
+		"img/shoes/1.jpg",
+		"img/shoes/1.jpg",
+		"img/shoes/1.jpg"
+	  ]
 	},
 	{
-		"id": 8,
-		"img": "img/clothes/4.jpg",
-		"name": "Dress",
-		"category": "Women / Dress",
-		"section": "Dresses",
-		"price": 139.00,
-		"ProductDetails": "Trendy dress that stands out.",
-		"productColors": [
-			"img/clothes/4_red.jpg",
-			"img/clothes/4_blue.jpg",
-			"img/clothes/4_black.jpg",
-			"img/clothes/4_white.jpg"
-		]
+	"id": 8,
+	"img": "img/clothes/4.jpg",
+	"name": "Dress",
+	"category": "Women / Dress",
+	"section": "Dresses",
+	"price": 139.00,
+	"ProductDetails": "Trendy dress that stands out.",
+	"productColors": [
+		"img/shoes/1.jpg",
+		"img/shoes/1.jpg",
+		"img/shoes/1.jpg",
+		"img/shoes/1.jpg"
+	  ]
 	},
 	{
-		"id": 9,
-		"img": "img/featured/1.jpg",
-		"name": "Men's Fashion T-Shirt",
-		"category": "Men / T-Shirt",
-		"section": "Featured",
-		"price": 139.00,
-		"ProductDetails": "The Gildan Ultra Cotton T-shirt is made from a substantial 6.0 oz. per sq. yd. fabric.",
-		"productColors": [
-			"img/featured/1_red.jpg",
-			"img/featured/1_blue.jpg",
-			"img/featured/1_black.jpg",
-			"img/featured/1_white.jpg"
-		]
+	"id": 9,
+	"img": "img/featured/1.jpg",
+	"name": "Men's Fashion T-Shirt",
+	"category": "Men / T-Shirt",
+	"section": "Featured",
+	"price": 139.00,
+	"ProductDetails": "The Gildan Ultra Cotton T-shirt is made from a substantial 6.0 oz. per sq. yd. fabric.",
+	"productColors": [
+		"img/shoes/1.jpg",
+		"img/shoes/1.jpg",
+		"img/shoes/1.jpg",
+		"img/shoes/1.jpg"
+	  ]
 	},
 	{
-		"id": 10,
-		"img": "img/featured/2.jpg",
-		"name": "Men's Fashion T-Shirt",
-		"category": "Men / T-Shirt",
-		"section": "Featured",
-		"price": 139.00,
-		"ProductDetails": "The Gildan Ultra Cotton T-shirt is made from a substantial 6.0 oz. per sq. yd. fabric.",
-		"productColors": [
-			"img/featured/2_red.jpg",
-			"img/featured/2_blue.jpg",
-			"img/featured/2_black.jpg",
-			"img/featured/2_white.jpg"
-		]
+	"id": 10,
+	"img": "img/featured/2.jpg",
+	"name": "Men's Fashion T-Shirt",
+	"category": "Men / T-Shirt",
+	"section": "Featured",
+	"price": 139.00,
+	"ProductDetails": "The Gildan Ultra Cotton T-shirt is made from a substantial 6.0 oz. per sq. yd. fabric.",
+	"productColors": [
+		"img/shoes/1.jpg",
+		"img/shoes/1.jpg",
+		"img/shoes/1.jpg",
+		"img/shoes/1.jpg"
+	  ]
 	},
 	{
-		"id": 11,
-		"img": "img/featured/3.jpg",
-		"name": "Men's Fashion T-Shirt",
-		"category": "Men / T-Shirt",
-		"section": "Featured",
-		"price": 139.00,
-		"ProductDetails": "The Gildan Ultra Cotton T-shirt is made from a substantial 6.0 oz. per sq. yd. fabric.",
-		"productColors": [
-			"img/featured/3_red.jpg",
-			"img/featured/3_blue.jpg",
-			"img/featured/3_black.jpg",
-			"img/featured/3_white.jpg"
-		]
+	"id": 11,
+	"img": "img/featured/3.jpg",
+	"name": "Men's Fashion T-Shirt",
+	"category": "Men / T-Shirt",
+	"section": "Featured",
+	"price": 139.00,
+	"ProductDetails": "The Gildan Ultra Cotton T-shirt is made from a substantial 6.0 oz. per sq. yd. fabric.",
+	"productColors": [
+		"img/shoes/1.jpg",
+		"img/shoes/1.jpg",
+		"img/shoes/1.jpg",
+		"img/shoes/1.jpg"
+	  ]
 	},
 	{
-		"id": 12,
-		"img": "img/featured/4.jpg",
-		"name": "Men's Fashion T-Shirt",
-		"category": "Men / T-Shirt",
-		"section": "Featured",
-		"price": 139.00,
-		"ProductDetails": "The Gildan Ultra Cotton T-shirt is made from a substantial 6.0 oz. per sq. yd. fabric.",
-		"productColors": [
-			"img/featured/4_red.jpg",
-			"img/featured/4_blue.jpg",
-			"img/featured/4_black.jpg",
-			"img/featured/4_white.jpg"
-		]
+	"id": 12,
+	"img": "img/featured/4.jpg",
+	"name": "Men's Fashion T-Shirt",
+	"category": "Men / T-Shirt",
+	"section": "Featured",
+	"price": 139.00,
+	"ProductDetails": "The Gildan Ultra Cotton T-shirt is made from a substantial 6.0 oz. per sq. yd. fabric.",
+	"productColors": [
+		"img/shoes/1.jpg",
+		"img/shoes/1.jpg",
+		"img/shoes/1.jpg",
+		"img/shoes/1.jpg"
+	  ]
 	}
 ]
 	
