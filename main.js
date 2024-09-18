@@ -24,16 +24,18 @@ function changeColor(newImage){
 function productDelails(id){
 	const activeProduct = allproduct[id]
 
-	// // document.querySelector('.product .images .active').src = allproduct[id].img
-	// document.querySelector('.product .images .color-product #one').src = allproduct[id].productColors[0]
-	// document.querySelector('.product .images .color-product #two').src = allproduct[id].productColors[1]
-	// document.querySelector('.product .images .color-product #three').src = allproduct[id].productColors[2]
-	// document.querySelector('.product .images .color-product #four').src = allproduct[id].productColors[3]
-	// document.querySelector('.product .images .info p').src = allproduct[id].ProductDetails
-	console.log(document.querySelector('.product .images .color-product #four').src)
-console.log(document.querySelector('.product .images .color-product #one').src)
-console.log(document.querySelector('.product .images .color-product #two').src)
-console.log(document.querySelector('.product .images .color-product #three').src)
+const active = document.querySelector('.product .images .active')
+	active.src = activeProduct.img
+	const activeOne = document.querySelector('.product .images .color-product #one')
+	activeOne.src = activeProduct.productColors[0]
+	const activeTwo = document.querySelector('.product .images .color-product #two')
+	activeTwo.src = activeProduct.productColors[1]
+	const activeThree = document.querySelector('.product .images .color-product #three')
+	activeThree.src = activeProduct.productColors[2]
+	const activeFour = document.querySelector('.product .images .color-product #four')
+	activeFour.src = activeProduct.productColors[3]
+	const activeDetails = document.querySelector('.product .images .info p')
+	activeDetails.src = activeProduct.ProductDetails
 }
 
 
