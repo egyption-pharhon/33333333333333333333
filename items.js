@@ -1,6 +1,6 @@
 // product in webpage
 function addproducts(fileName, locationOfProducts){
-	fetch('allProducts.json')
+	fetch('product.json')
 			.then(response => response.json())
 			.then(data => {
 				const products = document.querySelector(locationOfProducts);
@@ -8,7 +8,7 @@ function addproducts(fileName, locationOfProducts){
 
 				
 				data.forEach( product => {
-					if(product.featured){
+					if(product.fileName){
 					products.innerHTML += `
 						<div class="box">
 							<div class="image">
@@ -30,8 +30,8 @@ function addproducts(fileName, locationOfProducts){
 			}})
 			})
 }
-addproducts("featured", '.shop .content');
+addproducts("shop", '.shop .content');
 addproducts("featured", '.featured .content');
-addproducts('featured', '.dresses-jumpsuits .content');
-addproducts('featured', '.shoes .content');
+addproducts('dress', '.dresses-jumpsuits .content');
+addproducts('shoes', '.shoes .content');
 addproducts('featured', '.our-product .content');	
