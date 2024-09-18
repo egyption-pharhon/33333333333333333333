@@ -31,10 +31,10 @@ const activeDetails = document.querySelector('.product .images .info p');
 
 function productDetails(id) {
     const activeProduct = allproduct[id];
-console.error(activeOne.src);
-console.error(activeProduct.img);
-console.error(activeTwo.src);
-console.error(activeProduct.productColors[0]);
+console.log(activeOne.src);
+console.log(activeProduct.img);
+console.log(activeTwo.src);
+console.log(activeProduct.productColors[0]);
     if (activeProduct) {
         if (activeImage) {
             activeImage.src = activeProduct.img;
