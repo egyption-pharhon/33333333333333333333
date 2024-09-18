@@ -1,8 +1,9 @@
 // product in webpage
 function addproducts(fileName, locationOfProducts){
-	fetch(fileName)
+	fetch('allProducts.json')
 			.then(response => response.json())
 			.then(data => {
+				if(data.fileName){
 				const products = document.querySelector(locationOfProducts);
 				allproduct =data;
 
@@ -25,10 +26,12 @@ function addproducts(fileName, locationOfProducts){
 							<button>Add Cart</button>
 						</div>`
 				})
-			})
+			}else{
+				console.log("erro")	
+			}})
 }
-addproducts('product.json', '.shop .content');
-addproducts('featured.json', '.featured .content');
-addproducts('dresses&jumpsuits.json', '.dresses-jumpsuits .content');
-addproducts('shoes.json', '.shoes .content');
-addproducts('featured.json', '.our-product .content');	
+addproducts('featured', '.shop .content');
+addproducts('featured', '.featured .content');
+addproducts('featured', '.dresses-jumpsuits .content');
+addproducts('featured', '.shoes .content');
+addproducts('featured', '.our-product .content');	
