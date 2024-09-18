@@ -5,11 +5,13 @@ function openNavList(){
 	navlist.classList.toggle("show");
 }
 
-// open details of product
+let allproduct =[]
+
 
 function openProduct(id){
 	console.log(id)
-	// window.open("product.html", "_self")
+	console.log(allproduct)
+	window.open("product.html", "_self")
 }
 //  change color of product
 let activeImage = document.querySelector('.product .images .active')
