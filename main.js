@@ -24,8 +24,7 @@ function changeColor(newImage){
 function productDelails(id){
 	const activeProduct = allproduct[id]
 
-const active = document.querySelector('.product .images .active')
-	active.src = activeProduct.img
+	activeImage.src = activeProduct.img
 	const activeOne = document.querySelector('.product .images .color-product #one')
 	activeOne.src = activeProduct.productColors[0]
 	const activeTwo = document.querySelector('.product .images .color-product #two')
