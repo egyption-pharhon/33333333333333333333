@@ -11,7 +11,7 @@ let allproduct =[]
 function openProduct(id){
 	console.log(id)
 	console.log(allproduct)
-	window.open("product.html", "_self")
+	// window.open("product.html", "_self")
 }
 //  change color of product
 let activeImage = document.querySelector('.product .images .active')
