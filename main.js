@@ -5,7 +5,7 @@ function openNavList(){
 	navlist.classList.toggle("show");
 }
 
-let allproduct =[]
+let allproduct ={}
 
 
 function openProduct(id){
