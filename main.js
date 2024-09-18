@@ -8,12 +8,22 @@ function openNavList() {
 let allproduct = [];
 
 function openProduct(id) {
- openw()
+
     productDetails(id);
 
 }
+document.addEventListener("DOMContentLoaded", function() {
+        function openProduct(id) {
+
+    productDetails(id);
+
+}
+            setTimeout(function() {
+                window.open("product.html", "_self");
+            }, 2000); // تأخير 2 ثانية كمثال
+        });
 function openw(){
-        window.open("product.html", "_self");
+        
 }
 // change color of product
 let activeImage = document.querySelector('.product .images .active');
