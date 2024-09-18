@@ -7,7 +7,8 @@ function openNavList(){
 
 // open details of product
 
-function openProduct(){
+function openProduct(id){
+	console.log(id)
 	window.open("product.html", "_self")
 }
 //  change color of product
