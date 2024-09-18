@@ -64,7 +64,7 @@ function productDetails(id) {
 		<div class="product">
 			<div class="container">
 				<div class="images">
-					<img src="${activeProduct.img}" class="active">
+					<img src="${activeProduct.productColors[0]}" class="active">
 					<div class="color-product">
 						<img src="${activeProduct.productColors[0]}" onclick="changeColor(this.src)" id ="one">
 						<img src="${activeProduct.productColors[1]}" onclick="changeColor(this.src)" id ="two">
