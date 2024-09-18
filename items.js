@@ -8,7 +8,7 @@ function addproducts(fileName, locationOfProducts){
 
 				
 				data.forEach( product => {
-					if(product.category === fileName){
+					if(product.section === fileName){
 					products.innerHTML += `
 						<div class="box">
 							<div class="image">
@@ -31,7 +31,7 @@ function addproducts(fileName, locationOfProducts){
 			})
 }
 addproducts('shop', '.shop .content');
-addproducts("Men / T-Shirt", '.featured .content');
+addproducts("featured", '.featured .content');
 addproducts('dress', '.dresses-jumpsuits .content');
 addproducts('shoes', '.shoes .content');
-addproducts("Men / T-Shirt", '.our-product .content');	
+addproducts("featured", '.our-product .content');	
