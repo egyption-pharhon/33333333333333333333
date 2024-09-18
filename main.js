@@ -7,11 +7,7 @@ function openNavList() {
 // open details of product
 let allproduct = [];
 
-function openProduct(id) {
 
-    productDetails(id);
-
-}
 
         function openProduct(id) {
 document.addEventListener("DOMContentLoaded", function() {
