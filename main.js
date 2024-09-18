@@ -9,7 +9,7 @@ let allproduct = [];
 
 function openProduct(id) {
     productDetails(id);
-    window.open("product.html", "_self");
+    // window.open("product.html", "_self");
 }
 
 // change color of product
@@ -31,7 +31,10 @@ const activeDetails = document.querySelector('.product .images .info p');
 
 function productDetails(id) {
     const activeProduct = allproduct[id];
-
+console.error(activeOne.src);
+console.error(activeProduct.img);
+console.error(activeTwo.src);
+console.error(activeProduct.productColors[0]);
     if (activeProduct) {
         if (activeImage) {
             activeImage.src = activeProduct.img;
@@ -39,6 +42,7 @@ function productDetails(id) {
 
         if (activeOne) {
             activeOne.src = activeProduct.productColors[0];
+            
         }
 
         if (activeTwo) {
