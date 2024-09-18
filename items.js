@@ -1,6 +1,6 @@
 // product in webpage
 function addproducts(fileName, locationOfProducts){
-	fetch(fileName)
+	fetch(allProducts.json)
 			.then(response => response.json())
 			.then(data => {
 				const products = document.querySelector(locationOfProducts);
