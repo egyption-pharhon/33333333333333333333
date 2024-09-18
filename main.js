@@ -22,8 +22,10 @@ function openwindow(){
 
 function productDelails(id){
 	const activeProduct = allproduct[id]
- let containerOfProductPage = document.querySelector('.product .container');
-containerOfProductPage.innerHTML = `<div class="images">
+ let containerOfProductPage = document.querySelector('.product');
+containerOfProductPage.innerHTML = `
+<div class="container">
+<div class="images">
 					<img src="img/shop/1.jpg" class="active">
 					<div class="color-product">
 						<img src="img/shop/1.jpg" onclick="changeColor(this.src)">
@@ -51,6 +53,7 @@ containerOfProductPage.innerHTML = `<div class="images">
 					unmatched comfort with each wear. Featuring a taped neck and shoulder, and a seamless
 					double- needle collar, and available in a range of colors,
 					it offers it all in the ultimate head-tuming package.</p>
+				</div>
 				</div>`
 }
 
