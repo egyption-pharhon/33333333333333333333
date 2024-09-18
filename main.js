@@ -10,8 +10,8 @@ let allproduct =[]
 
 
 function openProduct(id){
-	productDelails(id)
-	window.open("product.html", "_self")
+	productDelails(id);
+	openwindow();
 }
 //  change color of product
 let activeImage = document.querySelector('.product .images .active')
@@ -19,7 +19,9 @@ let activeImage = document.querySelector('.product .images .active')
 function changeColor(newImage){
 	activeImage.src = newImage
 }
-
+function openwindow(){
+		window.open("product.html", "_self")
+}
 function productDelails(id){
 	const activeProduct = allproduct[id]
 
