@@ -9,7 +9,7 @@ function openNavList(){
 
 function openProduct(id){
 	console.log(id)
-	window.open("product.html", "_self")
+	// window.open("product.html", "_self")
 }
 //  change color of product
 let activeImage = document.querySelector('.product .images .active')
