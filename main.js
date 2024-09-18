@@ -22,9 +22,12 @@ function changeColor(newImage){
 function openwindow(){
 		// window.open("product.html", "_self")
 }
+
+const containerOfProductPage = document.querySelector('.product-details')
+
 function productDelails(id){
 	const activeProduct = allproduct[id]
-const containerOfProductPage = document.querySelector('.product-details')
+
 console.log(containerOfProductPage)
 }
 
