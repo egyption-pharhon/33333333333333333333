@@ -1,9 +1,9 @@
 // product in webpage
 function addproducts(fileName, locationOfProducts){
-	fetch('product.json')
+	fetch(fileName)
 			.then(response => response.json())
 			.then(data => {
-				const products = document.querySelector('.shop .content');
+				const products = document.querySelector(locationOfProducts);
 				data.forEach( product => {
 					products.innerHTML += `
 						<div class="box">
