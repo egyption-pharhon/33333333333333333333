@@ -9,13 +9,12 @@ let allProduct = [];
 
 // فتح تفاصيل المنتج
 function openProduct(id) {
-    document.addEventListener("DOMContentLoaded", function() {
-        openw()
-        setTimeout(function() {
+      setTimeout(function() {
             
             productDetails(id);
-        }, 2000); // تأخير 2 ثانية
-    });
+        }, 2000);
+        openw()
+      
 }
 
 // تغيير لون المنتج
