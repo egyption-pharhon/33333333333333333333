@@ -20,20 +20,24 @@ let activeImage = document.querySelector('.product .images .active')
 function changeColor(newImage){
 	activeImage.src = newImage
 }
-
+	const activeOne = document.querySelector('.product .images .color-product #one')
+	const activeTwo = document.querySelector('.product .images .color-product #two')
+const activeThree = document.querySelector('.product .images .color-product #three')
+	const activeFour = document.querySelector('.product .images .color-product #four')
+	const activeDetails = document.querySelector('.product .images .info p')
 function productDelails(id){
 	const activeProduct = allproduct[id]
 
 	activeImage.src = activeProduct.img
-	const activeOne = document.querySelector('.product .images .color-product #one')
+
 	activeOne.src = activeProduct.productColors[0]
-	const activeTwo = document.querySelector('.product .images .color-product #two')
+
 	activeTwo.src = activeProduct.productColors[1]
-	const activeThree = document.querySelector('.product .images .color-product #three')
+	
 	activeThree.src = activeProduct.productColors[2]
-	const activeFour = document.querySelector('.product .images .color-product #four')
+
 	activeFour.src = activeProduct.productColors[3]
-	const activeDetails = document.querySelector('.product .images .info p')
+
 	activeDetails.src = activeProduct.ProductDetails
 }
 
