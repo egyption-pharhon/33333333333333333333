@@ -8,7 +8,7 @@ function openNavList() {
 let allproduct = [];
 
 function openProduct(id) {
-    function openw()
+ openw()
     productDetails(id);
 
 }
