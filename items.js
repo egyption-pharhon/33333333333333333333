@@ -3,12 +3,12 @@ function addproducts(fileName, locationOfProducts){
 	fetch('allProducts.json')
 			.then(response => response.json())
 			.then(data => {
-				if(data.featured){
 				const products = document.querySelector(locationOfProducts);
 				allproduct =data;
 
 				
 				data.forEach( product => {
+					if(data.featured){
 					products.innerHTML += `
 						<div class="box">
 							<div class="image">
@@ -25,10 +25,10 @@ function addproducts(fileName, locationOfProducts){
 							<span>$${product.price}</span>
 							<button>Add Cart</button>
 						</div>`
-				})
-			}else{
+				}else{
 				console.log("erro")	
 			}})
+			})
 }
 addproducts("featured", '.shop .content');
 addproducts("featured", '.featured .content');
