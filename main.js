@@ -1,38 +1,34 @@
-// open list items @ media 767px
+// فتح قائمة العناصر عند حجم الشاشة 767 بكسل
 function openNavList() {
-    let navlist = document.querySelector('nav');
+    const navlist = document.querySelector('nav');
     navlist.classList.toggle("show");
 }
 
-// open details of product
-let allproduct = [];
+// مصفوفة لتخزين جميع المنتجات
+let allProduct = [];
 
-
-
-        function openProduct(id) {
-document.addEventListener("DOMContentLoaded", function() {
-    productDetails(id);
-     setTimeout(function() {
-                window.open("product.html", "_self");
-            }, 2000); // تأخير 2 ثانية كمثال
-        });
-
+// فتح تفاصيل المنتج
+function openProduct(id) {
+    document.addEventListener("DOMContentLoaded", function() {
+        productDetails(id);
+        setTimeout(function() {
+            window.open("product.html", "_self");
+        }, 2000); // تأخير 2 ثانية
+    });
 }
-       
-function openw(){
-        
-}
-// change color of product
+
+// تغيير لون المنتج
 let activeImage = document.querySelector('.product .images .active');
 
 function changeColor(newImage) {
     if (activeImage) {
         activeImage.src = newImage;
     } else {
-        console.error('Active image element not found');
+        console.error('عنصر الصورة النشط غير موجود');
     }
 }
 
+// عناصر الألوان
 let activeOne = document.querySelector('#farag .container .images .color-product #one');
 let activeTwo = document.querySelector('#farag .container .images .color-product #two');
 let activeThree = document.querySelector('#farag .container .images .color-product #three');
@@ -40,16 +36,23 @@ let activeFour = document.querySelector('#farag .container .images .color-produc
 let activeDetails = document.querySelector('#farag .container .images .info p');
 
 function productDetails(id) {
-    const activeProduct = allproduct[id];
-console.log(activeOne);
-console.log(activeProduct);
-console.log(activeTwo);
-console.log(activeProduct);
-            activeImage.src = activeProduct.img;
+    const activeProduct = allProduct[id];
+    if (!activeProduct) {
+        console.error('المنتج غير موجود');
+        return;
+    }
 
-            activeOne.src = activeProduct.productColors[0];
-            activeTwo.src = activeProduct.productColors[1];
-            activeThree.src = activeProduct.productColors[2];
-            activeFour.src = activeProduct.productColors[3];
-            activeDetails.textContent = activeProduct.ProductDetails; // استخدام textContent بدلاً من src
+    // تحديث تفاصيل المنتج
+    activeImage.src = activeProduct.img;
+
+    activeOne.src = activeProduct.productColors[0];
+    activeTwo.src = activeProduct.productColors[1];
+    activeThree.src = activeProduct.productColors[2];
+    activeFour.src = activeProduct.productColors[3];
+    activeDetails.textContent = activeProduct.ProductDetails; // استخدام textContent
+}
+
+// دالة إضافية لفتح شيء آخر
+function openw() {
+    // إضافة أي كود ترغب فيه هنا
 }
