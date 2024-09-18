@@ -20,7 +20,7 @@ function changeColor(newImage){
 	activeImage.src = newImage
 }
 function openwindow(){
-		window.open("product.html", "_self")
+		// window.open("product.html", "_self")
 }
 function productDelails(id){
 	const activeProduct = allproduct[id]
