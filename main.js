@@ -14,23 +14,21 @@ function openProduct(id){
 	openwindow();
 }
 //  change color of product
+
+function openwindow(){
+		// window.open("product.html", "_self")
+}
+
+function productDelails(id){
+	const activeProduct = allproduct[id]
+ let containerOfProductPage = document.querySelector('.product .container');
+console.log(containerOfProductPage)
+}
+
 let activeImage = document.querySelector('.product .images .active')
 
 function changeColor(newImage){
 	activeImage.src = newImage
 }
-function openwindow(){
-		// window.open("product.html", "_self")
-}
-
-const containerOfProductPage = document.querySelector('.product-details #container')
-
-function productDelails(id){
-	const activeProduct = allproduct[id]
-
-console.log(containerOfProductPage)
-}
-
-
 
 
