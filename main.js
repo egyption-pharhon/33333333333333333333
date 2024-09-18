@@ -23,11 +23,11 @@ function changeColor(newImage) {
     }
 }
 
-let activeOne = document.querySelector('.product .container .images .color-product #one');
-let activeTwo = document.querySelector('.product .container .images .color-product #two');
-let activeThree = document.querySelector('.product .container .images .color-product #three');
-let activeFour = document.querySelector('.product .container .images .color-product #four');
-let activeDetails = document.querySelector('.product .container .images .info p');
+let activeOne = document.querySelector('#farag .container .images .color-product #one');
+let activeTwo = document.querySelector('#farag .container .images .color-product #two');
+let activeThree = document.querySelector('#farag .container .images .color-product #three');
+let activeFour = document.querySelector('#farag .container .images .color-product #four');
+let activeDetails = document.querySelector('#farag .container .images .info p');
 
 function productDetails(id) {
     const activeProduct = allproduct[id];
