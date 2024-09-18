@@ -31,7 +31,7 @@ function addproducts(fileName, locationOfProducts){
 			})
 }
 addproducts('shop', '.shop .content');
-addproducts("featured", '.featured .content');
-addproducts('dress', '.dresses-jumpsuits .content');
+addproducts('featured', '.featured .content');
+addproducts('Dresses', '.dresses-jumpsuits .content');
 addproducts('shoes', '.shoes .content');
-addproducts("featured", '.our-product .content');	
+addproducts('featured', '.our-product .content');	
