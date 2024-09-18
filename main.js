@@ -8,10 +8,13 @@ function openNavList() {
 let allproduct = [];
 
 function openProduct(id) {
+    function openw()
     productDetails(id);
-    window.open("product.html", "_self");
-}
 
+}
+function openw(){
+        window.open("product.html", "_self");
+}
 // change color of product
 let activeImage = document.querySelector('.product .images .active');
 
