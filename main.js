@@ -23,7 +23,7 @@ function openwindow(){
 		// window.open("product.html", "_self")
 }
 
-const containerOfProductPage = document.querySelector('.product-details')
+const containerOfProductPage = document.querySelector('.product-details #container')
 
 function productDelails(id){
 	const activeProduct = allproduct[id]
