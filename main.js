@@ -10,9 +10,10 @@ let allProduct = [];
 // فتح تفاصيل المنتج
 function openProduct(id) {
     document.addEventListener("DOMContentLoaded", function() {
-        productDetails(id);
+        openw()
         setTimeout(function() {
-            window.open("product.html", "_self");
+            
+            productDetails(id);
         }, 2000); // تأخير 2 ثانية
     });
 }
@@ -55,4 +56,5 @@ function productDetails(id) {
 // دالة إضافية لفتح شيء آخر
 function openw() {
     // إضافة أي كود ترغب فيه هنا
+    window.open("product.html", "_self");
 }
