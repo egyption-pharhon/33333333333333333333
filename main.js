@@ -23,11 +23,11 @@ function changeColor(newImage) {
     }
 }
 
-const activeOne = document.querySelector('.product .images .color-product #one');
-const activeTwo = document.querySelector('.product .images .color-product #two');
-const activeThree = document.querySelector('.product .images .color-product #three');
-const activeFour = document.querySelector('.product .images .color-product #four');
-const activeDetails = document.querySelector('.product .images .info p');
+let activeOne = document.querySelector('.product .images .color-product #one');
+let activeTwo = document.querySelector('.product .images .color-product #two');
+let activeThree = document.querySelector('.product .images .color-product #three');
+let activeFour = document.querySelector('.product .images .color-product #four');
+let activeDetails = document.querySelector('.product .images .info p');
 
 function productDetails(id) {
     const activeProduct = allproduct[id];
