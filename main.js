@@ -12,16 +12,17 @@ function openProduct(id) {
     productDetails(id);
 
 }
-document.addEventListener("DOMContentLoaded", function() {
+
         function openProduct(id) {
-
+document.addEventListener("DOMContentLoaded", function() {
     productDetails(id);
-
-}
-            setTimeout(function() {
+     setTimeout(function() {
                 window.open("product.html", "_self");
             }, 2000); // تأخير 2 ثانية كمثال
         });
+
+}
+       
 function openw(){
         
 }
