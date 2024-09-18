@@ -4,7 +4,9 @@ function addproducts(fileName, locationOfProducts){
 			.then(response => response.json())
 			.then(data => {
 				const products = document.querySelector(locationOfProducts);
-				allproduct.push(...data)
+				allproduct.push(...data);
+
+				
 				data.forEach( product => {
 					products.innerHTML += `
 						<div class="box">
