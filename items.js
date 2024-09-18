@@ -1,6 +1,6 @@
 // product in webpage
 function addproducts(fileName, locationOfProducts){
-	fetch('Copy of product.json')
+	fetch('product.json')
 			.then(response => response.json())
 			.then(data => {
 				const products = document.querySelector(locationOfProducts);
@@ -30,8 +30,8 @@ function addproducts(fileName, locationOfProducts){
 			}})
 			})
 }
-addproducts("shop", '.shop .content');
-addproducts("featured", '.featured .content');
+addproducts('shop', '.shop .content');
+addproducts('featured', '.featured .content');
 addproducts('dress', '.dresses-jumpsuits .content');
 addproducts('shoes', '.shoes .content');
 addproducts('featured', '.our-product .content');	
