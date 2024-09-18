@@ -11,7 +11,6 @@ let allproduct =[]
 
 function openProduct(id){
 	productDelails(id)
-
 	window.open("product.html", "_self")
 }
 //  change color of product
@@ -24,9 +23,10 @@ function changeColor(newImage){
 function productDelails(id){
 	const activeProduct = allproduct[id]
 
-	let containerOfProductPage = document.querySelector('.product .container')
+	const containerOfProductPage = document.querySelector('.product .container')
 
-	containerOfProductPage.innerHTML = `<div class="images">
+	containerOfProductPage.innerHTML += `
+ <div class="images">
 					<img src="img/shop/1.jpg" class="active">
 					<div class="color-product">
 						<img src="img/shop/1.jpg" onclick="changeColor(this.src)">
