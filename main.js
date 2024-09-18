@@ -9,7 +9,7 @@ let allproduct = [];
 
 function openProduct(id) {
     productDetails(id);
-    // window.open("product.html", "_self");
+    window.open("product.html", "_self");
 }
 
 // change color of product
