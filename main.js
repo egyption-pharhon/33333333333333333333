@@ -35,34 +35,11 @@ console.log(activeOne);
 console.log(activeProduct);
 console.log(activeTwo);
 console.log(activeProduct);
-    if (activeProduct) {
-        if (activeImage) {
             activeImage.src = activeProduct.img;
-        }
 
-        if (activeOne) {
             activeOne.src = activeProduct.productColors[0];
-            
-        }
-
-        if (activeTwo) {
             activeTwo.src = activeProduct.productColors[1];
-        }
-
-        if (activeThree) {
             activeThree.src = activeProduct.productColors[2];
-        }
-
-        if (activeFour) {
             activeFour.src = activeProduct.productColors[3];
-        }
-
-        if (activeDetails) {
             activeDetails.textContent = activeProduct.ProductDetails; // استخدام textContent بدلاً من src
-        } else {
-            console.error('Active details element not found');
-        }
-    } else {
-        console.error('Active product not found for ID:', id);
-    }
 }
