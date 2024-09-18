@@ -1,10 +1,12 @@
+
 [
 	{
 	  "id": 0,
 	  "img": "img/shop/1.jpg",
 	  "name": "Men's Fashion T-Shirt",
-	  "featured": "Men / T-Shirt",
+	  "category": "Men / T-Shirt",
 	  "price": 139.00,
+	  "shop" : true,
 	  "ProductDetails": "The Gildan Ultra Cotton T-shirt is made from a substantial 6.0 oz. per sq.",
 	  "productColors": [
 		"img/shop/1.jpg",
@@ -17,8 +19,9 @@
 	  "id": 2,
 	  "img": "img/shop/2.jpg",
 	  "name": "Men's Fashion T-Shirt",
-	  "featured": "Men / T-Shirt",
+	  "category": "Men / T-Shirt",
 	  "price": 139.00,
+	  "shop" : true,
 	  "ProductDetails": "The Gildan Ultra Cotton T-shirt is made from a substantial 6.0 oz. per sq.",
 	  "productColors": [
 		"img/shop/1.jpg",
@@ -31,8 +34,9 @@
 	  "id": 3,
 	  "img": "img/shop/3.jpg",
 	  "name": "Men's Fashion T-Shirt",
-	  "featured": "Men / T-Shirt",
+	  "category": "Men / T-Shirt",
 	  "price": 139.00,
+	  "shop" : true,
 	  "ProductDetails": "The Gildan Ultra Cotton T-shirt is made from a substantial 6.0 oz. per sq.",
 	  "productColors": [
 		"img/shop/1.jpg",
@@ -45,8 +49,9 @@
 	  "id": 4,
 	  "img": "img/shop/4.jpg",
 	  "name": "Men's Fashion T-Shirt",
-	  "featured": "Men / T-Shirt",
+	  "category": "Men / T-Shirt",
 	  "price": 139.00,
+	  "shop" : true,
 	  "ProductDetails": "The Gildan Ultra Cotton T-shirt is made from a substantial 6.0 oz. per sq.",
 	  "productColors": [
 		"img/shop/1.jpg",
@@ -59,8 +64,9 @@
 	  "id": 5,
 	  "img": "img/shop/5.jpg",
 	  "name": "Men's Fashion T-Shirt",
-	  "featured": "Men / T-Shirt",
+	  "category": "Men / T-Shirt",
 	  "price": 139.00,
+	  "shop" : true,
 	  "ProductDetails": "The Gildan Ultra Cotton T-shirt is made from a substantial 6.0 oz. per sq.",
 	  "productColors": [
 		"img/shop/1.jpg",
@@ -73,8 +79,9 @@
 	  "id": 6,
 	  "img": "img/shop/6.jpg",
 	  "name": "Men's Fashion T-Shirt",
-	  "featured": "Men / T-Shirt",
+	  "category": "Men / T-Shirt",
 	  "price": 139.00,
+	  "shop" : true,
 	  "ProductDetails": "The Gildan Ultra Cotton T-shirt is made from a substantial 6.0 oz. per sq.",
 	  "productColors": [
 		"img/shop/1.jpg",
@@ -87,8 +94,9 @@
 	  "id": 7,
 	  "img": "img/shop/7.jpg",
 	  "name": "Men's Fashion T-Shirt",
-	  "featured": "Men / T-Shirt",
+	  "category": "Men / T-Shirt",
 	  "price": 139.00,
+	  "shop" : true,
 	  "ProductDetails": "The Gildan Ultra Cotton T-shirt is made from a substantial 6.0 oz. per sq.",
 	  "productColors": [
 		"img/shop/1.jpg",
@@ -101,8 +109,9 @@
 	  "id": 8,
 	  "img": "img/shop/8.jpg",
 	  "name": "Men's Fashion T-Shirt",
-	  "featured": "Men / T-Shirt",
+	  "category": "Men / T-Shirt",
 	  "price": 139.00,
+	  "shop" : true,
 	  "ProductDetails": "The Gildan Ultra Cotton T-shirt is made from a substantial 6.0 oz. per sq.",
 	  "productColors": [
 		"img/shop/1.jpg",
@@ -115,8 +124,9 @@
 	  "id": 9,
 	  "img": "img/shop/9.jpg",
 	  "name": "Men's Fashion T-Shirt",
-	  "featured": "Men / T-Shirt",
+	  "category": "Men / T-Shirt",
 	  "price": 139.00,
+	  "shop" : true,
 	  "ProductDetails": "The Gildan Ultra Cotton T-shirt is made from a substantial 6.0 oz. per sq.",
 	  "productColors": [
 		"img/shop/1.jpg",
@@ -129,8 +139,9 @@
 	  "id": 10,
 	  "img": "img/shop/10.jpg",
 	  "name": "Men's Fashion T-Shirt",
-	  "featured": "Men / T-Shirt",
+	  "category": "Men / T-Shirt",
 	  "price": 139.00,
+	  "shop" : true,
 	  "ProductDetails": "The Gildan Ultra Cotton T-shirt is made from a substantial 6.0 oz. per sq.",
 	  "productColors": [
 		"img/shop/1.jpg",
@@ -143,8 +154,9 @@
 	  "id": 11,
 	  "img": "img/shop/11.jpg",
 	  "name": "Men's Fashion T-Shirt",
-	  "featured": "Men / T-Shirt",
+	  "category": "Men / T-Shirt",
 	  "price": 139.00,
+	  "shop" : true,
 	  "ProductDetails": "The Gildan Ultra Cotton T-shirt is made from a substantial 6.0 oz. per sq.",
 	  "productColors": [
 		"img/shop/1.jpg",
@@ -157,8 +169,9 @@
 	  "id": 12,
 	  "img": "img/shop/12.jpg",
 	  "name": "Men's Fashion T-Shirt",
-	  "featured": "Men / T-Shirt",
+	  "category": "Men / T-Shirt",
 	  "price": 139.00,
+	  "shop" : true,
 	  "ProductDetails": "The Gildan Ultra Cotton T-shirt is made from a substantial 6.0 oz. per sq.",
 	  "productColors": [
 		"img/shop/1.jpg",
@@ -171,8 +184,9 @@
 	  "id": 13,
 	  "img": "img/shop/13.jpg",
 	  "name": "Men's Fashion T-Shirt",
-	  "featured": "Men / T-Shirt",
+	  "category": "Men / T-Shirt",
 	  "price": 139.00,
+	  "shop" : true,
 	  "ProductDetails": "The Gildan Ultra Cotton T-shirt is made from a substantial 6.0 oz. per sq.",
 	  "productColors": [
 		"img/shop/1.jpg",
@@ -185,8 +199,9 @@
 	  "id": 14,
 	  "img": "img/shop/14.jpg",
 	  "name": "Men's Fashion T-Shirt",
-	  "featured": "Men / T-Shirt",
+	  "category": "Men / T-Shirt",
 	  "price": 139.00,
+	  "shop" : true,
 	  "ProductDetails": "The Gildan Ultra Cotton T-shirt is made from a substantial 6.0 oz. per sq.",
 	  "productColors": [
 		"img/shop/1.jpg",
@@ -199,8 +214,9 @@
 	  "id": 15,
 	  "img": "img/shop/15.jpg",
 	  "name": "Men's Fashion T-Shirt",
-	  "featured": "Men / T-Shirt",
+	  "category": "Men / T-Shirt",
 	  "price": 139.00,
+	  "shop" : true,
 	  "ProductDetails": "The Gildan Ultra Cotton T-shirt is made from a substantial 6.0 oz. per sq.",
 	  "productColors": [
 		"img/shop/1.jpg",
@@ -213,8 +229,9 @@
 	  "id": 16,
 	  "img": "img/shop/16.jpg",
 	  "name": "Men's Fashion T-Shirt",
-	  "featured": "Men / T-Shirt",
+	  "category": "Men / T-Shirt",
 	  "price": 139.00,
+	  "shop" : true,
 	  "ProductDetails": "The Gildan Ultra Cotton T-shirt is made from a substantial 6.0 oz. per sq.",
 	  "productColors": [
 		"img/shop/1.jpg",
@@ -227,8 +244,9 @@
 	  "id": 17,
 	  "img": "img/shop/17.jpg",
 	  "name": "Men's Fashion T-Shirt",
-	  "featured": "Men / T-Shirt",
+	  "category": "Men / T-Shirt",
 	  "price": 139.00,
+	  "shop" : true,
 	  "ProductDetails": "The Gildan Ultra Cotton T-shirt is made from a substantial 6.0 oz. per sq.",
 	  "productColors": [
 		"img/shop/1.jpg",
@@ -241,8 +259,9 @@
 	  "id": 18,
 	  "img": "img/shop/18.jpg",
 	  "name": "Men's Fashion T-Shirt",
-	  "featured": "Men / T-Shirt",
+	  "category": "Men / T-Shirt",
 	  "price": 139.00,
+	  "shop" : true,
 	  "ProductDetails": "The Gildan Ultra Cotton T-shirt is made from a substantial 6.0 oz. per sq.",
 	  "productColors": [
 		"img/shop/1.jpg",
@@ -255,8 +274,9 @@
 	  "id": 19,
 	  "img": "img/shop/19.jpg",
 	  "name": "Men's Fashion T-Shirt",
-	  "featured": "Men / T-Shirt",
+	  "category": "Men / T-Shirt",
 	  "price": 139.00,
+	  "shop" : true,
 	  "ProductDetails": "The Gildan Ultra Cotton T-shirt is made from a substantial 6.0 oz. per sq.",
 	  "productColors": [
 		"img/shop/1.jpg",
@@ -269,8 +289,9 @@
 	  "id": 20,
 	  "img": "img/shop/20.jpg",
 	  "name": "Men's Fashion T-Shirt",
-	  "featured": "Men / T-Shirt",
+	  "category": "Men / T-Shirt",
 	  "price": 139.00,
+	  "shop" : true,
 	  "ProductDetails": "The Gildan Ultra Cotton T-shirt is made from a substantial 6.0 oz. per sq.",
 	  "productColors": [
 		"img/shop/1.jpg",
@@ -283,8 +304,9 @@
 	  "id": 21,
 	  "img": "img/shop/21.jpg",
 	  "name": "Men's Fashion T-Shirt",
-	  "featured": "Men / T-Shirt",
+	  "category": "Men / T-Shirt",
 	  "price": 139.00,
+	  "shop" : true,
 	  "ProductDetails": "The Gildan Ultra Cotton T-shirt is made from a substantial 6.0 oz. per sq.",
 	  "productColors": [
 		"img/shop/1.jpg",
@@ -297,8 +319,9 @@
 	  "id": 22,
 	  "img": "img/shop/22.jpg",
 	  "name": "Men's Fashion T-Shirt",
-	  "featured": "Men / T-Shirt",
+	  "category": "Men / T-Shirt",
 	  "price": 139.00,
+	  "shop" : true,
 	  "ProductDetails": "The Gildan Ultra Cotton T-shirt is made from a substantial 6.0 oz. per sq.",
 	  "productColors": [
 		"img/shop/1.jpg",
@@ -311,8 +334,9 @@
 	  "id": 23,
 	  "img": "img/shop/23.jpg",
 	  "name": "Men's Fashion T-Shirt",
-	  "featured": "Men / T-Shirt",
+	  "category": "Men / T-Shirt",
 	  "price": 139.00,
+	  "shop" : true,
 	  "ProductDetails": "The Gildan Ultra Cotton T-shirt is made from a substantial 6.0 oz. per sq.",
 	  "productColors": [
 		"img/shop/1.jpg",
@@ -320,6 +344,186 @@
 		"img/shop/1.jpg",
 		"img/shop/1.jpg"
 	  ]
+	},
+	{
+		"id": 0,
+		"img": "img/shoes/1.jpg",
+		"name": "shoes",
+		"category": "shoes",
+		"shoes":true,
+		"price": 139.00,
+		"ProductDetails": "The Gildan Ultra Cotton T-shirt is made from a substantial 6.0 oz. per sq.",
+		"productColors": [
+		"img/shoes/1.jpg",
+		"img/shoes/1.jpg",
+		"img/shoes/1.jpg",
+		"img/shoes/1.jpg"
+		]
+	},
+	{
+		"id": 2,
+		"img": "img/shoes/2.jpg",
+		"name": "shoes",
+		"category": "shoes",
+		"shoes":true,
+		"price": 139.00,
+		"ProductDetails": "The Gildan Ultra Cotton T-shirt is made from a substantial 6.0 oz. per sq.",
+		"productColors": [
+		"img/shoes/1.jpg",
+		"img/shoes/1.jpg",
+		"img/shoes/1.jpg",
+		"img/shoes/1.jpg"
+		]
+	},
+	{
+		"id": 3,
+		"img": "img/shoes/3.jpg",
+		"name": "shoes",
+		"category": "shoes",
+		"shoes":true,
+		"price": 139.00,
+		"ProductDetails": "The Gildan Ultra Cotton T-shirt is made from a substantial 6.0 oz. per sq.",
+		"productColors": [
+		"img/shoes/1.jpg",
+		"img/shoes/1.jpg",
+		"img/shoes/1.jpg",
+		"img/shoes/1.jpg"
+		]
+	},
+	{
+		"id": 4,
+		"img": "img/shoes/4.jpg",
+		"name": "shoes",
+		"category": "shoes",
+		"shoes":true,
+		"price": 139.00,
+		"ProductDetails": "The Gildan Ultra Cotton T-shirt is made from a substantial 6.0 oz. per sq.",
+		"productColors": [
+		"img/shoes/1.jpg",
+		"img/shoes/1.jpg",
+		"img/shoes/1.jpg",
+		"img/shoes/1.jpg"
+		]
+	},
+	{
+		"id": 0,
+		"img": "img/clothes/1.jpg",
+		"name": "Dress",
+		"category": "women / Dress",
+		"dress":true,
+		"price": 139.00,
+		"ProductDetails": "The Gildan Ultra Cotton T-shirt is made from a substantial 6.0 oz. per sq.",
+		"productColors": [
+		"img/clothes/1.jpg",
+		"img/clothes/1.jpg",
+		"img/clothes/1.jpg",
+		"img/clothes/1.jpg"
+		]
+	},
+	{
+		"id": 2,
+		"img": "img/clothes/2.jpg",
+		"name": "Dress",
+		"category": "women / Dress",
+		"dress":true,
+		"price": 139.00,
+		"ProductDetails": "The Gildan Ultra Cotton T-shirt is made from a substantial 6.0 oz. per sq.",
+		"productColors": [
+		"img/clothes/1.jpg",
+		"img/clothes/1.jpg",
+		"img/clothes/1.jpg",
+		"img/clothes/1.jpg"
+		]
+	},
+	{
+		"id": 3,
+		"img": "img/clothes/3.jpg",
+		"name": "Dress",
+		"category": "women / Dress",
+		"dress":true,
+		"price": 139.00,
+		"ProductDetails": "The Gildan Ultra Cotton T-shirt is made from a substantial 6.0 oz. per sq.",
+		"productColors": [
+		"img/clothes/1.jpg",
+		"img/clothes/1.jpg",
+		"img/clothes/1.jpg",
+		"img/clothes/1.jpg"
+		]
+	},
+	{
+		"id": 4,
+		"img": "img/clothes/4.jpg",
+		"name": "Dress",
+		"category": "women / Dress",
+		"dress":true,
+		"price": 139.00,
+		"ProductDetails": "The Gildan Ultra Cotton T-shirt is made from a substantial 6.0 oz. per sq.",
+		"productColors": [
+		"img/clothes/1.jpg",
+		"img/clothes/1.jpg",
+		"img/clothes/1.jpg",
+		"img/clothes/1.jpg"
+		]
+	},
+	{
+		"id": 0,
+		"img": "img/featured/1.jpg",
+		"name": "Men's Fashion T-Shirt",
+		"category": "Men / T-Shirt",
+		"featured":true,
+		"price": 139.00,
+		"ProductDetails": "The Gildan Ultra Cotton T-shirt is made from a substantial 6.0 oz. per sq.",
+		"productColors": [
+		"img/featured/1.jpg",
+		"img/featured/1.jpg",
+		"img/featured/1.jpg",
+		"img/featured/1.jpg"
+		]
+	},
+	{
+		"id": 2,
+		"img": "img/featured/2.jpg",
+		"name": "Men's Fashion T-Shirt",
+		"category": "Men / T-Shirt",
+		"featured":true,
+		"price": 139.00,
+		"ProductDetails": "The Gildan Ultra Cotton T-shirt is made from a substantial 6.0 oz. per sq.",
+		"productColors": [
+		"img/featured/1.jpg",
+		"img/featured/1.jpg",
+		"img/featured/1.jpg",
+		"img/featured/1.jpg"
+		]
+	},
+	{
+		"id": 3,
+		"img": "img/featured/3.jpg",
+		"name": "Men's Fashion T-Shirt",
+		"category": "Men / T-Shirt",
+		"featured":true,
+		"price": 139.00,
+		"ProductDetails": "The Gildan Ultra Cotton T-shirt is made from a substantial 6.0 oz. per sq.",
+		"productColors": [
+		"img/featured/1.jpg",
+		"img/featured/1.jpg",
+		"img/featured/1.jpg",
+		"img/featured/1.jpg"
+		]
+	},
+	{
+		"id": 4,
+		"img": "img/featured/4.jpg",
+		"name": "Men's Fashion T-Shirt",
+		"category": "Men / T-Shirt",
+		"featured":true,
+		"price": 139.00,
+		"ProductDetails": "The Gildan Ultra Cotton T-shirt is made from a substantial 6.0 oz. per sq.",
+		"productColors": [
+		"img/featured/1.jpg",
+		"img/featured/1.jpg",
+		"img/featured/1.jpg",
+		"img/featured/1.jpg"
+		]
 	}
-  ]
-  
+]
+
