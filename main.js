@@ -132,7 +132,7 @@ function changeColor(newImage){
 	console.log(document.getElementById('addElement'))
     document.getElementById('addElement').addEventListener('click', function() {
         addToCart(1);
-                }
+                })
             })
     
    
