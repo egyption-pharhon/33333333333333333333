@@ -39,7 +39,7 @@ let activeProductDetails = document.querySelector('.contentOfPage')
 							 <option>Large</option>
 						 </select>
 						 <input type="number" value="1">
-						 <button>Add to Cart</button>
+						 <button onclick="addToCart(${ allproduct[id].id})">>Add to Cart</button>
 						 <h4>Product Details</h4>
 						 <p>${ allproduct[id].ProductDetails}</p>
 					 </div>
@@ -83,7 +83,7 @@ let activeProductDetails = document.querySelector('.contentOfPage')
 									</div>
 									<p onclick="openProduct(${product.id})" product-id="${product.id}">${product.name}</p>
 									<span>$${product.price}</span>
-									<button>Add Cart</button>
+									<button onclick="addToCart(${product.id})">>Add Cart</button>
 								</div>`
 						}
 					})
@@ -109,15 +109,6 @@ function addToCart(id) {
             // Query for the element in the parsed document
             const elementInCart = doc.querySelector('.cart table tbody');
             console.log(elementInCart); // Check if the element exists
-            
-            // تفاصيل المنتج
-            const product = {
-                id: id,
-                image: "img/shop/1.jpg",
-                name: "Men's Fashion T-Shirt",
-                price: 92.00,
-                quantity: 1
-            };
 
             // إضافة المنتج إلى واجهة المستخدم
             elementInCart.innerHTML += `
@@ -126,19 +117,19 @@ function addToCart(id) {
                         <i class="fa-regular fa-trash-can"></i>
                     </td>
                     <td>
-                        <img src="${product.image}">
+                        <img src="${ allproduct[id].img}">
                     </td>
                     <td>
-                        <h4>${product.name}</h4>
+                        <h4>${ allproduct[id].name}</h4>
                     </td>
                     <td>
-                        <h4>$${product.price.toFixed(2)}</h4>
+                        <h4>$${ allproduct[id].price}</h4>
                     </td>
                     <td>
                         <input type="number" value="${product.quantity}">
                     </td>
                     <td>
-                        <h4>$${(product.price * product.quantity).toFixed(2)}</h4>
+                        <h4>$${ allproduct[id].price}</h4>
                     </td>
                 </tr>`;
 
