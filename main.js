@@ -11,6 +11,7 @@ let allproduct =[]
 let activeImage;
 let featureProduct;
 let elementInCart;
+let amountOfProduct;
 let activeProductDetails = document.querySelector('.contentOfPage')
 
 	function openProduct(id) {
@@ -126,10 +127,10 @@ function addToCart(id) {
                         <h4>$${ allproduct[id].price}</h4>
                     </td>
                     <td>
-                        <input type="number" value="1">
+                        <input type="number" value="${amountOfProduct}" min="1">
                     </td>
                     <td>
-                        <h4>$${ allproduct[id].price}</h4>
+                        <h4>$${ allproduct[id].price * amountOfProduct}</h4>
                     </td>
                 </tr>`;
 
@@ -167,10 +168,10 @@ function loadCart() {
                     <h4>$${product.price}</h4>
                 </td>
                 <td>
-                    <input type="number" value="1">
+                    <input type="number" value="${amountOfProduct}" min="1">
                 </td>
                 <td>
-                    <h4>$${product.price}</h4>
+                    <h4>$${ product.price * amountOfProduct}</h4>
                 </td>
             </tr>`;
     });
