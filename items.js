@@ -108,12 +108,11 @@ addproducts('Shoes', '.shoes .content');
 	fetch('product.json')
 			.then(response => response.json())
 			.then(data => {
- 				featureProduct 
+ 				featureProduct = document.querySelector('.our-product .container .content')
 				allproduct =data;
 
 				
 				data.forEach( product => {
-					if(product.section === "Featured"){
 					featureProduct.innerHTML += `
 						<div class="box">
 							<div class="image">
