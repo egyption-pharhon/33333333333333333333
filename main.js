@@ -238,7 +238,7 @@ function totalOfAllProducts() {
     
     inputs.forEach(input => {
         const id = parseInt(input.dataset.id);
-        const priceOfProduct = allproduct.[id].price;
+        const priceOfProduct = allproduct[id].price;
         totalofall += (input.value * priceOfProduct).toFixed(2);
     });
 
