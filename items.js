@@ -69,6 +69,7 @@ setTimeout(() => {
 
 				
 				data.forEach( product => {
+					if(product.section === "Featured"){
 					featureProduct.innerHTML += `
 						<div class="box">
 							<div class="image">
@@ -85,7 +86,7 @@ setTimeout(() => {
 							<span>$${product.price}</span>
 							<button>Add Cart</button>
 						</div>`
-		})
+					}})
 			})
 }, 100);
 }
