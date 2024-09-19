@@ -248,7 +248,7 @@ function totalOfAllProducts() {
 
     document.querySelector('.cart-total .subtotal').innerHTML =`${totalOfAllProductInCart}`;
     document.querySelector('.cart-total .shipping').innerHTML =`${shipping}`;
-    document.querySelector('.cart-total .total').innerHTML =`${totalOfAllProductInCart + shipping).toFixed(2)}`;
+    document.querySelector('.cart-total .total').innerHTML =`${(totalOfAllProductInCart + shipping).toFixed(2)}`;
 }
 
 window.onload = loadCart;
