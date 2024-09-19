@@ -81,7 +81,7 @@ function changeColor(newImage) {
     if (activeImage) {
         activeImage.src = newImage;
     } else {
-        console.error('عنصر الصورة النشط غير موجود');
+        console.error('عنصر الصورة النشط غير موجود:', activeImage);
     }
 }
 
