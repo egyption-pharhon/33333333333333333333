@@ -162,5 +162,5 @@ function openProduct(id) {
 // 		<script src="items.js"></script>
 // `;
 console.log(id)
-console.log(allProduct[id])
+console.log(allproduct[id])
 }
