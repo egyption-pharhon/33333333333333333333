@@ -21,7 +21,7 @@ function addproducts(fileName, locationOfProducts){
 								<i class="fas fa-star"></i>
 								<i class="fas fa-star"></i>
 							</div>
-							<p onclick="openProduct(${product.id})" product-id="${product.id}">${product.name}</p>
+							<p onclick="openProduct(this.producy-id)" product-id="${product.id}">${product.name}</p>
 							<span>$${product.price}</span>
 							<button>Add Cart</button>
 						</div>`
