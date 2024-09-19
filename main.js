@@ -102,8 +102,9 @@ function addToCart(id){
 	fetch('cart.html')
 				.then(response => response.text())
 				.then(data => {
-					let elementInCart =document.querySelector('.cart table .element-in-cart')
-						elementInCart.innerHTML +=`<tr>
+					const elementInCart =document.querySelector('.cart table .element-in-cart')
+						elementInCart.innerHTML +=`
+      <tr>
 								<td>
 									<i class="fa-regular fa-trash-can"></i>
 								</td>
