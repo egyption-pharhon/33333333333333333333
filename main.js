@@ -38,7 +38,7 @@ let activeProductDetails = document.querySelector('.contentOfPage')
 							 <option>Large</option>
 						 </select>
 						 <input type="number" value="1">
-						 <button onclick="addToCart(${allproduct[id].id})">Add to Cart</button>
+						 <button>Add to Cart</button>
 						 <h4>Product Details</h4>
 						 <p>${ allproduct[id].ProductDetails}</p>
 					 </div>
@@ -82,7 +82,7 @@ let activeProductDetails = document.querySelector('.contentOfPage')
 									</div>
 									<p onclick="openProduct(${product.id})" product-id="${product.id}">${product.name}</p>
 									<span>$${product.price}</span>
-									<button onclick="addToCart(${product.id})">Add Cart</button>
+									<button>Add Cart</button>
 								</div>`
 						}
 					})
@@ -97,7 +97,7 @@ function changeColor(newImage){
 }
 
 const elementInCart ;
-document.addEventListener('DOMContentLoaded', function() {
+
     function addToCart(id) {
         fetch('cart.html')
             .then(response => response.text())
@@ -105,34 +105,34 @@ document.addEventListener('DOMContentLoaded', function() {
                 elementInCart = document.querySelector('.cart table tbody');
                 console.log(elementInCart); // تحقق مما إذا كان العنصر موجودًا
 
-                // if (elementInCart) {
-                //     elementInCart.innerHTML += `
-                //         <tr>
-                //             <td>
-                //                 <i class="fa-regular fa-trash-can"></i>
-                //             </td>
-                //             <td>
-                //                 <img src="img/shop/1.jpg">
-                //             </td>
-                //             <td>
-                //                 <h4>Men's Fashion T-Shirt</h4>
-                //             </td>
-                //             <td>
-                //                 <h4>$92.00</h4>
-                //             </td>
-                //             <td>
-                //                 <input type="number" value="1">
-                //             </td>
-                //             <td>
-                //                 <h4>$92.00</h4>
-                //             </td>
-                //         </tr>`;
-                // } else {
-                //     console.error('العنصر .cart table tbody غير موجود في الصفحة.');
-                // }
+                if (elementInCart) {
+                    elementInCart.innerHTML += `
+                        <tr>
+                            <td>
+                                <i class="fa-regular fa-trash-can"></i>
+                            </td>
+                            <td>
+                                <img src="img/shop/1.jpg">
+                            </td>
+                            <td>
+                                <h4>Men's Fashion T-Shirt</h4>
+                            </td>
+                            <td>
+                                <h4>$92.00</h4>
+                            </td>
+                            <td>
+                                <input type="number" value="1">
+                            </td>
+                            <td>
+                                <h4>$92.00</h4>
+                            </td>
+                        </tr>`;
+                } else {
+                    console.error('العنصر .cart table tbody غير موجود في الصفحة.');
+                }
             })
-    //         .catch(error => console.error('خطأ:', error));
-    // }
+            .catch(error => console.error('خطأ:', error));
+    }
     
     // أضف حدث الزر
 	console.log(document.getElementById('addElement'))
