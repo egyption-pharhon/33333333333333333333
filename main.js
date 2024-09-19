@@ -152,7 +152,7 @@ function loadCart() {
 
     cart.forEach(product => {
         tbody.innerHTML += `
-            <tr id="product-${product.id}">
+           <tr id="product-${product.id}">
                 <td>
                     <i class="fa-regular fa-trash-can" onclick="deleteFromCart(${product.id})"></i>
                 </td>
@@ -166,10 +166,10 @@ function loadCart() {
                     <h4>$${product.price}</h4>
                 </td>
                 <td>
-                    <input type="number" value="1">
+                    <input type="number" value="1" class="amount-input" data-id="${product.id}">
                 </td>
                 <td>
-                    <h4>$${product.price}</h4>
+                    <h4 class="total-price">$${product.price}</h4>
                 </td>
             </tr>`;
     });
