@@ -24,9 +24,9 @@ let activeProductDetails = document.querySelector('.contentOfPage');
 
 let activeImage = document.querySelector('.product .images .active');
 
-function changeColor(newImage) {
+function changeColor(newImage , activeImage) {
     if (activeImage) {
-        activeImage.src = newImage;
+        activeImage = newImage;
     } else {
         console.error('عنصر الصورة النشط غير موجود');
     }
