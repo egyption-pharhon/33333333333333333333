@@ -164,7 +164,7 @@ function loadCart() {
                     <h4>${product.name}</h4>
                 </td>
                 <td>
-                    <h4>$${product.price)}</h4>
+                    <h4>$${product.price}</h4>
                 </td>
                 <td>
                     <input type="number" value="1">
