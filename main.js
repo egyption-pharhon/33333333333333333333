@@ -123,6 +123,7 @@ function addToCart(id){
 									<h4>$92.00</h4>
 								</td>
 							</tr>`
+					document.querySelector('.cart tbody').innerHTML = elementInCart.innerHTML;
 					})
 		
 }
