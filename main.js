@@ -199,7 +199,7 @@ function deleteFromCart(id) {
 
 function updateTotalPrice(id) {
     const input = document.querySelector(`.amount-input[data-id="${id}"]`);
-    const price = allproduct[id].price;
+    const price = allproduct.find(product => product.id === id).price;
     const totalPriceElement = document.querySelector(`#product-${id} .total-price`);
     totalPriceElement.innerText = `$${(input.value * price).toFixed(2)}`;
 	totalofall +=(input.value * price).toFixed(2)
