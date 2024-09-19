@@ -200,13 +200,31 @@ function deleteFromCart(id) {
 function updateTotalPrice(id) {
     const input = document.querySelector(`.amount-input[data-id="${id}"]`);
     const price = allproduct[id].price;
+
+    // تحقق من وجود input
+    if (!input) {
+        console.error(`Input not found for id: ${id}`);
+        return;
+    }
+
     const totalPriceElement = document.querySelector(`#product-${id} .total-price`);
+
+    // تحقق من وجود totalPriceElement
+    if (!totalPriceElement) {
+        console.error(`Total price element not found for id: ${id}`);
+        return;
+    }
+
     totalPriceElement.innerText = `$${(input.value * price).toFixed(2)}`;
-	totalofall = 0; // إعادة تعيين المجموع
+    
+    // إعادة حساب المجموع
+    totalofall = 0; // إعادة تعيين المجموع
     document.querySelectorAll('.amount-input').forEach(input => {
         totalofall += (input.value * allproduct[parseInt(input.dataset.id)].price);
     });
+    console.log(totalofall); // طباعة المجموع الإجمالي
 }
+
 // لاستدعاء loadCart عند تحميل الصفحة
 window.onload = loadCart;
 
