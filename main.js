@@ -9,6 +9,7 @@ function openNavList(){
 let allproduct =[]
 
 let activeImage;
+let featureProduct;
 let activeProductDetails = document.querySelector('.contentOfPage')
 
 	function openProduct(id) {
@@ -57,6 +58,7 @@ let activeProductDetails = document.querySelector('.contentOfPage')
 			 <!-- ======================end other products====================== -->
 	 `; 
 	 activeImage = document.querySelector('.product .images .active')
+	featureProduct = document.querySelector('.our-product .container .content')
 }
 //  change color of product
  
