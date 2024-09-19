@@ -109,42 +109,81 @@ function addToCart(id) {
             // Query for the element in the parsed document
             const elementInCart = doc.querySelector('.cart table tbody');
             console.log(elementInCart); // Check if the element exists
-	  elementInCart.innerHTML += `
-                        <tr>
-                            <td>
-                                <i class="fa-regular fa-trash-can"></i>
-                            </td>
-                            <td>
-                                <img src="img/shop/1.jpg">
-                            </td>
-                            <td>
-                                <h4>Men's Fashion T-Shirt</h4>
-                            </td>
-                            <td>
-                                <h4>$92.00</h4>
-                            </td>
-                            <td>
-                                <input type="number" value="1">
-                            </td>
-                            <td>
-                                <h4>$92.00</h4>
-                            </td>
-                        </tr>`;
             
+            // تفاصيل المنتج
+            const product = {
+                id: id,
+                image: "img/shop/1.jpg",
+                name: "Men's Fashion T-Shirt",
+                price: 92.00,
+                quantity: 1
+            };
+
+            // إضافة المنتج إلى واجهة المستخدم
+            elementInCart.innerHTML += `
+                <tr>
+                    <td>
+                        <i class="fa-regular fa-trash-can"></i>
+                    </td>
+                    <td>
+                        <img src="${product.image}">
+                    </td>
+                    <td>
+                        <h4>${product.name}</h4>
+                    </td>
+                    <td>
+                        <h4>$${product.price.toFixed(2)}</h4>
+                    </td>
+                    <td>
+                        <input type="number" value="${product.quantity}">
+                    </td>
+                    <td>
+                        <h4>$${(product.price * product.quantity).toFixed(2)}</h4>
+                    </td>
+                </tr>`;
+
+            // جلب عربة التسوق الحالية من localStorage أو تهيئتها
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            // إضافة المنتج إلى عربة التسوق
+            cart.push(product);
+            // تحديث localStorage
+            localStorage.setItem('cart', JSON.stringify(cart));
+
         })
         .catch(error => {
             console.error('Error fetching cart:', error);
         });
 }
 
-                // if (elementInCart) {
-                  
-	// 		 // أضف حدث الزر
-	// console.log(document.getElementById('addElement'))
- //    document.getElementById('addElement').addEventListener('click', function() {
- //        addToCart(1);
- //                })
- //            })
-    
-   
-	// console.log(elementInCart)
+// لتحميل عربة التسوق عند تحميل الصفحة
+function loadCart() {
+    const cart = JSON.parse(localStorage.getItem('cart')) || [];
+    const tbody = document.querySelector('.cart table tbody');
+
+    cart.forEach(product => {
+        tbody.innerHTML += `
+            <tr>
+                <td>
+                    <i class="fa-regular fa-trash-can"></i>
+                </td>
+                <td>
+                    <img src="${product.image}">
+                </td>
+                <td>
+                    <h4>${product.name}</h4>
+                </td>
+                <td>
+                    <h4>$${product.price.toFixed(2)}</h4>
+                </td>
+                <td>
+                    <input type="number" value="${product.quantity}">
+                </td>
+                <td>
+                    <h4>$${(product.price * product.quantity).toFixed(2)}</h4>
+                </td>
+            </tr>`;
+    });
+}
+
+// لاستدعاء loadCart عند تحميل الصفحة
+window.onload = loadCart;
