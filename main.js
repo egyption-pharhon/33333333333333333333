@@ -10,9 +10,42 @@ let allproduct =[]
 
 let activeImage;
 let featureProduct;
-let totalofall =0;
+let totalofall = 0;
 let shipping = 35;
 let activeProductDetails = document.querySelector('.contentOfPage')
+// product in webpage
+function addproducts(fileName, locationOfProducts){
+	fetch('product.json')
+			.then(response => response.json())
+			.then(data => {
+				const products = document.querySelector(locationOfProducts);
+				allproduct =data;
+				data.forEach( product => {
+					if(product.section === fileName){
+						products.innerHTML += `
+							<div class="box">
+								<div class="image">
+									<img src="${product.img}">
+								</div>
+								<div class="stars">
+									<i class="fas fa-star"></i>
+									<i class="fas fa-star"></i>
+									<i class="fas fa-star"></i>
+									<i class="fas fa-star"></i>
+									<i class="fas fa-star"></i>
+								</div>
+								<p onclick="openProduct(${product.id})" product-id="${product.id}">${product.name}</p>
+								<span>$${product.price}</span>
+								<button id="addElement">Add Cart</button>
+							</div>`
+					}
+				})
+			})
+}
+addproducts('shop', '.shop .content');
+addproducts('Featured', '.featured .content');
+addproducts('Dresses', '.dresses-jumpsuits .content');
+addproducts('Shoes', '.shoes .content');
 
 	function openProduct(id) {
 		activeProductDetails.innerHTML =`
@@ -103,15 +136,12 @@ function addToCart(id) {
     fetch('cart.html')
         .then(response => response.text())
         .then(data => {
-            // Create a new DOM parser
-            const parser = new DOMParser();
-            // Parse the HTML string into a document
-            const doc = parser.parseFromString(data, 'text/html');
-            // Query for the element in the parsed document
-            const elementInCart = doc.querySelector('.cart table tbody');
-            console.log(elementInCart); // Check if the element exists
 
-            // إضافة المنتج إلى واجهة المستخدم
+            const parser = new DOMParser();
+            const doc = parser.parseFromString(data, 'text/html');
+            const elementInCart = doc.querySelector('.cart table tbody');
+            console.log(elementInCart);
+
             elementInCart.innerHTML += `
                <tr id="product-${allproduct[id].id}">
                     <td>
@@ -134,20 +164,15 @@ function addToCart(id) {
                     </td>
                  </tr>`;
 
-            // جلب عربة التسوق الحالية من localStorage أو تهيئتها
             let cart = JSON.parse(localStorage.getItem('cart')) || [];
-            // إضافة المنتج إلى عربة التسوق
             cart.push(allproduct[id]);
-            // تحديث localStorage
+
             localStorage.setItem('cart', JSON.stringify(cart));
 
         })
-        .catch(error => {
-            console.error('Error fetching cart:', error);
-        });
+        .catch(console.log('error'));
 }
 
-// لتحميل عربة التسوق عند تحميل الصفحة
 function loadCart() {
     const cart = JSON.parse(localStorage.getItem('cart')) || [];
     const tbody = document.querySelector('.cart table tbody');
@@ -183,45 +208,45 @@ function loadCart() {
         });
     });
 }
-// Function to delete an item from the cart
+// delete items from the cart
 function deleteFromCart(id) {
-    // Get the current cart
+
     let cart = JSON.parse(localStorage.getItem('cart')) || [];
-    // Filter out the item to be deleted
+
     cart = cart.filter(product => product.id !== id);
-    // Update localStorage
+
     localStorage.setItem('cart', JSON.stringify(cart));
     
-    // Update the UI
+
     const row = document.getElementById(`product-${id}`);
-    if (row) {
-        row.remove(); // Remove the row from the table
-    }
+
+        row.remove(); 
 }
 
 function updateTotalPrice(id) {
     const input = document.querySelector(`.amount-input[data-id="${id}"]`);
-    const price = allproduct.find(product => product.id === id).price;
+    const price = allproduct.[id].price;
     const totalPriceElement = document.querySelector(`#product-${id} .total-price`);
     totalPriceElement.innerText = `$${(input.value * price).toFixed(2)}`;
 	
-	
-	calculateTotal()
+	totalOfAllProducts()
+
 }
-function calculateTotal() {
-    totalofall = 0; // إعادة تعيين المجموع الكلي
+
+function totalOfAllProducts() {
     const inputs = document.querySelectorAll('.amount-input');
     
     inputs.forEach(input => {
         const id = parseInt(input.dataset.id);
-        const price = allproduct.find(product => product.id === id).price;
-        totalofall += input.value * price;
+        const priceOfProduct = allproduct.[id].price;
+        totalofall += (input.value * priceOfProduct).toFixed(2);
     });
-	    document.querySelector('.cart-total .subtotal').innerHTML =`$${totalofall}`;
-    document.querySelector('.cart-total .shipping').innerHTML =`$${shipping}`;
-    document.querySelector('.cart-total .total').innerHTML =`$${totalofall + shipping}`;
+
+    document.querySelector('.cart-total .subtotal').innerHTML =`${totalofall}`;
+    document.querySelector('.cart-total .shipping').innerHTML =`${shipping}`;
+    document.querySelector('.cart-total .total').innerHTML =`${totalofall + shipping}`;
 }
-// لاستدعاء loadCart عند تحميل الصفحة
+
 window.onload = loadCart;
 
 
