@@ -5,64 +5,62 @@ function openNavList(){
 	navlist.classList.toggle("show");
 }
 
+// open details of product
 let allproduct =[]
 
 let activeImage;
 let featureProduct;
-let totalOfAllProductInCart = 0;
+let totalofall =0;
 let shipping = 35;
 let activeProductDetails = document.querySelector('.contentOfPage')
 
-// open details of product
-function openProduct(id) {
-    activeProductDetails.innerHTML =`
-            <!-- ======================start product====================== -->
-            <div class="product">
-                <div class="container">
-                    <div class="images">
-                        <img src="${ allproduct[id].img}" class="active">
-                        <div class="color-product">
-                            <img src="${ allproduct[id].productColors[0]}" onclick="changeColor(this.src)" id ="one">
-                            <img src="${ allproduct[id].productColors[1]}" onclick="changeColor(this.src)" id ="two">
-                            <img src="${ allproduct[id].productColors[2]}" onclick="changeColor(this.src)" id ="three">
-                            <img src="${ allproduct[id].productColors[3]}" onclick="changeColor(this.src)" id ="four">
-                        </div>
-                    </div>
-                    <div class="info">
-                        <span>${ allproduct[id].category}</span>
-                        <h3>${ allproduct[id].name}</h3>
-                        <span class="price">${allproduct[id].price}</span>
-                        <select>
-                            <option>Select Size</option>
-                            <option>XL</option>
-                            <option>XXL</option>
-                            <option>Small</option>
-                            <option>Large</option>
-                        </select>
-                        <input type="number" value="1">
-                        <button id="addElement">Add to Cart</button>
-                        <h4>Product Details</h4>
-                        <p>${ allproduct[id].ProductDetails}</p>
-                    </div>
-                </div>
-            </div>
-            <!-- ======================end product====================== -->
-            <!-- ======================start other products====================== -->
-            <div class="products our-product" id="product">
-                <div class="container">
-                    <div class="header">
-                        <h3>Related Products</h3>
-                    </div>
-                    <div class="content">
-                
-                    </div>
-                </div>
-            </div>
-            <!-- ======================end other products====================== -->
-	`; 
-
-	activeImage = document.querySelector('.product .images .active')
-
+	function openProduct(id) {
+		activeProductDetails.innerHTML =`
+			 <!-- ======================start product====================== -->
+			 <div class="product">
+				 <div class="container">
+					 <div class="images">
+						 <img src="${ allproduct[id].img}" class="active">
+						 <div class="color-product">
+							 <img src="${ allproduct[id].productColors[0]}" onclick="changeColor(this.src)" id ="one">
+							 <img src="${ allproduct[id].productColors[1]}" onclick="changeColor(this.src)" id ="two">
+							 <img src="${ allproduct[id].productColors[2]}" onclick="changeColor(this.src)" id ="three">
+							 <img src="${ allproduct[id].productColors[3]}" onclick="changeColor(this.src)" id ="four">
+						 </div>
+					 </div>
+					 <div class="info">
+						 <span>${ allproduct[id].category}</span>
+						 <h3>${ allproduct[id].name}</h3>
+						 <span class="price">${allproduct[id].price}</span>
+						 <select>
+							 <option>Select Size</option>
+							 <option>XL</option>
+							 <option>XXL</option>
+							 <option>Small</option>
+							 <option>Large</option>
+						 </select>
+						 <input type="number" value="1">
+						 <button id="addElement">Add to Cart</button>
+						 <h4>Product Details</h4>
+						 <p>${ allproduct[id].ProductDetails}</p>
+					 </div>
+				 </div>
+			 </div>
+			 <!-- ======================end product====================== -->
+			 <!-- ======================start other products====================== -->
+			 <div class="products our-product" id="product">
+				 <div class="container">
+					 <div class="header">
+						 <h3>Related Products</h3>
+					 </div>
+					 <div class="content">
+                    
+					 </div>
+				 </div>
+			 </div>
+			 <!-- ======================end other products====================== -->
+	 `; 
+	 activeImage = document.querySelector('.product .images .active')
 	setTimeout(() => {
 		featureProduct = document.querySelector('#product .container .content')
 		fetch('product.json')
@@ -105,12 +103,15 @@ function addToCart(id) {
     fetch('cart.html')
         .then(response => response.text())
         .then(data => {
-
+            // Create a new DOM parser
             const parser = new DOMParser();
+            // Parse the HTML string into a document
             const doc = parser.parseFromString(data, 'text/html');
+            // Query for the element in the parsed document
             const elementInCart = doc.querySelector('.cart table tbody');
-            console.log(elementInCart);
+            console.log(elementInCart); // Check if the element exists
 
+            // إضافة المنتج إلى واجهة المستخدم
             elementInCart.innerHTML += `
                <tr id="product-${allproduct[id].id}">
                     <td>
@@ -133,15 +134,20 @@ function addToCart(id) {
                     </td>
                  </tr>`;
 
+            // جلب عربة التسوق الحالية من localStorage أو تهيئتها
             let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            // إضافة المنتج إلى عربة التسوق
             cart.push(allproduct[id]);
-
+            // تحديث localStorage
             localStorage.setItem('cart', JSON.stringify(cart));
 
         })
-        .catch(console.log('error'));
+        .catch(error => {
+            console.error('Error fetching cart:', error);
+        });
 }
 
+// لتحميل عربة التسوق عند تحميل الصفحة
 function loadCart() {
     const cart = JSON.parse(localStorage.getItem('cart')) || [];
     const tbody = document.querySelector('.cart table tbody');
@@ -177,47 +183,46 @@ function loadCart() {
         });
     });
 }
-// delete items from the cart
+// Function to delete an item from the cart
 function deleteFromCart(id) {
-
+    // Get the current cart
     let cart = JSON.parse(localStorage.getItem('cart')) || [];
-
+    // Filter out the item to be deleted
     cart = cart.filter(product => product.id !== id);
-
+    // Update localStorage
     localStorage.setItem('cart', JSON.stringify(cart));
     
-
+    // Update the UI
     const row = document.getElementById(`product-${id}`);
-
-        row.remove(); 
+    if (row) {
+        row.remove(); // Remove the row from the table
+    }
 }
 
 function updateTotalPrice(id) {
     const input = document.querySelector(`.amount-input[data-id="${id}"]`);
-    const price = allproduct[id].price;
+    const price = allproduct.find(product => product.id === id).price;
     const totalPriceElement = document.querySelector(`#product-${id} .total-price`);
     totalPriceElement.innerText = `$${(input.value * price).toFixed(2)}`;
 	
-	totalOfAllProducts()
-
+	
+	calculateTotal()
 }
-
-function totalOfAllProducts() {
+function calculateTotal() {
+    totalofall = 0; // إعادة تعيين المجموع الكلي
     const inputs = document.querySelectorAll('.amount-input');
     
     inputs.forEach(input => {
         const id = parseInt(input.dataset.id);
-        const priceOfProduct = allproduct[id].price;
-        totalOfAllProductInCart += input.value * priceOfProduct;
+        const price = allproduct.find(product => product.id === id).price;
+        totalofall += input.value * price;
     });
-
-    document.querySelector('.cart-total .subtotal').innerHTML =`${totalOfAllProductInCart}`;
-    document.querySelector('.cart-total .shipping').innerHTML =`${shipping}`;
-    document.querySelector('.cart-total .total').innerHTML =`${(totalOfAllProductInCart + shipping).toFixed(2)}`;
+	    document.querySelector('.cart-total .subtotal').innerHTML =`$${totalofall}`;
+    document.querySelector('.cart-total .shipping').innerHTML =`$${shipping}`;
+    document.querySelector('.cart-total .total').innerHTML =`$${totalofall + shipping}`;
 }
-
+// لاستدعاء loadCart عند تحميل الصفحة
 window.onload = loadCart;
-
 
 
 
