@@ -22,12 +22,4 @@ let activeFour = document.querySelector('#farag .container .images .color-produc
 let activeDetails = document.querySelector('#farag .container .images .info p');
 let activeProductDetails = document.querySelector('.contentOfPage');
 
-let activeImage = document.querySelector('.product .images .active');
 
-function changeColor(newImage , activeImage) {
-    if (activeImage) {
-        activeImage = newImage;
-    } else {
-        console.error('عنصر الصورة النشط غير موجود');
-    }
-}
