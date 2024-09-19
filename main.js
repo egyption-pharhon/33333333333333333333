@@ -126,7 +126,7 @@ function addToCart(id) {
                         <h4>$${ allproduct[id].price}</h4>
                     </td>
                     <td>
-                        <input type="number" value="1">
+                        <input type="number" value="1" class="amount-input">
                     </td>
                     <td>
                         <h4>$${ allproduct[id].price}</h4>
@@ -167,7 +167,7 @@ function loadCart() {
                     <h4>$${product.price}</h4>
                 </td>
                 <td>
-                    <input type="number" value="1">
+                    <input type="number" value="1" class="amount-input">
                 </td>
                 <td>
                     <h4>$${product.price}</h4>
