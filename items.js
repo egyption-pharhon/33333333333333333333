@@ -21,7 +21,7 @@ function addproducts(fileName, locationOfProducts){
 							</div>
 							<p onclick="openProduct(${product.id})" product-id="${product.id}">${product.name}</p>
 							<span>$${product.price}</span>
-							<button onclick="addToCart(1)">Add Cart</button>
+							<button onclick="addToCart(${product.id})">Add Cart</button>
 						</div>`
 				}else{
 					console.log("erro")	
