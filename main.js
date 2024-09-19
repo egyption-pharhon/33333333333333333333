@@ -112,9 +112,9 @@ function addToCart(id) {
 
             // إضافة المنتج إلى واجهة المستخدم
             elementInCart.innerHTML += `
-                <tr>
+                <tr id="product-${id}">
                     <td>
-                        <i class="fa-regular fa-trash-can"></i>
+                        <i class="fa-regular fa-trash-can" onclick="deleteFromCart(${allproduct[id].id})"></i>
                     </td>
                     <td>
                         <img src="${ allproduct[id].img}">
@@ -153,9 +153,9 @@ function loadCart() {
 
     cart.forEach(product => {
         tbody.innerHTML += `
-            <tr>
+            <tr id="product-${id}">
                 <td>
-                    <i class="fa-regular fa-trash-can"></i>
+                    <i class="fa-regular fa-trash-can" onclick="deleteFromCart(${product.id})"></i>
                 </td>
                 <td>
                     <img src="${product.img}">
@@ -175,6 +175,20 @@ function loadCart() {
             </tr>`;
     });
 }
-
+// Function to delete an item from the cart
+function deleteFromCart(id) {
+    // Get the current cart
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    // Filter out the item to be deleted
+    cart = cart.filter(product => product.id !== id);
+    // Update localStorage
+    localStorage.setItem('cart', JSON.stringify(cart));
+    
+    // Update the UI
+    const row = document.getElementById(`product-${id}`);
+    if (row) {
+        row.remove(); // Remove the row from the table
+    }
+}
 // لاستدعاء loadCart عند تحميل الصفحة
 window.onload = loadCart;
