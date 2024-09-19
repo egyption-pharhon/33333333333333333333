@@ -98,14 +98,31 @@ function changeColor(newImage){
 }
 
 
+function addToCart(id) {
+    fetch('cart.html')
+        .then(response => response.text())
+        .then(data => {
+            // Create a new DOM parser
+            const parser = new DOMParser();
+            // Parse the HTML string into a document
+            const doc = parser.parseFromString(data, 'text/html');
+            // Query for the element in the parsed document
+            const elementInCart = doc.querySelector('.cart table tbody');
+            console.log(elementInCart); // Check if the element exists
 
-    function addToCart(id) {
-        fetch('cart.html')
-            .then(response => response.text())
-            .then(data => {
-                elementInCart = data.querySelector('.cart table tbody');
-                console.log(elementInCart); // تحقق مما إذا كان العنصر موجودًا
-	    })}
+            // You can add your logic here to add the item to the cart
+            if (elementInCart) {
+                // Add your item logic here
+                console.log(`Item with ID ${id} added to cart.`);
+            } else {
+                console.log('Cart element not found.');
+            }
+        })
+        .catch(error => {
+            console.error('Error fetching cart:', error);
+        });
+}
+
  //                if (elementInCart) {
  //                    elementInCart.innerHTML += `
  //                        <tr>
