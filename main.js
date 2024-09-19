@@ -34,7 +34,7 @@ let activeProductDetails = document.querySelector('body');
 
 function productDetails(id) {
     
-	console.log( allProduct[id].img)
+	console.log( allProduct[id])
  activeProductDetails.innerHTML =`
 		<!-- ======================start header====================== -->
 		<header>
