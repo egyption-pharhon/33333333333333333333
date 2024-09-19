@@ -239,12 +239,12 @@ function totalOfAllProducts() {
     inputs.forEach(input => {
         const id = parseInt(input.dataset.id);
         const priceOfProduct = allproduct[id].price;
-        totalofall += (input.value * priceOfProduct).toFixed(2);
+        totalofall += input.value * priceOfProduct;
     });
 
     document.querySelector('.cart-total .subtotal').innerHTML =`${totalofall}`;
-    document.querySelector('.cart-total .shipping').innerHTML =`${shipping}`;
-    document.querySelector('.cart-total .total').innerHTML =`${totalofall + shipping}`;
+    document.querySelector('.cart-total .shipping').innerHTML =`${totalofall}`;
+    document.querySelector('.cart-total .total').innerHTML =`${(totalofall + shipping).toFixed(2)}`;
 }
 
 window.onload = loadCart;
