@@ -136,7 +136,7 @@ function addToCart(id) {
             // جلب عربة التسوق الحالية من localStorage أو تهيئتها
             let cart = JSON.parse(localStorage.getItem('cart')) || [];
             // إضافة المنتج إلى عربة التسوق
-            cart.push(product);
+            cart.push(allproduct[id]);
             // تحديث localStorage
             localStorage.setItem('cart', JSON.stringify(cart));
 
