@@ -132,12 +132,8 @@ function changeColor(newImage){
 	console.log(document.getElementById('addElement'))
     document.getElementById('addElement').addEventListener('click', function() {
         addToCart(1);
-                } else {
-                    console.error('العنصر .cart table tbody غير موجود في الصفحة.');
                 }
             })
-            .catch(error => console.error('خطأ:', error));
-    }
     
    
 	console.log(elementInCart)
