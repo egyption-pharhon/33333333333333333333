@@ -103,38 +103,39 @@ document.addEventListener('DOMContentLoaded', function() {
         fetch('cart.html')
             .then(response => response.text())
             .then(data => {
-                // التأكد من وجود عنصر الـ cart في الصفحة الحالية
-                const elementInCart = document.querySelector('.cart table tbody');
-                console.log(elementInCart);
+		    console.log(data)
+    //             // التأكد من وجود عنصر الـ cart في الصفحة الحالية
+    //             const elementInCart = document.querySelector('.cart table tbody');
+    //             console.log(elementInCart);
 
-                // تحقق إذا كان العنصر موجودًا
-                if (elementInCart) {
-                    // إضافة الصف إلى الجدول
-                    elementInCart.innerHTML += `
-                        <tr>
-                            <td>
-                                <i class="fa-regular fa-trash-can"></i>
-                            </td>
-                            <td>
-                                <img src="img/shop/1.jpg">
-                            </td>
-                            <td>
-                                <h4>Men's Fashion T-Shirt</h4>
-                            </td>
-                            <td>
-                                <h4>$92.00</h4>
-                            </td>
-                            <td>
-                                <input type="number" value="1">
-                            </td>
-                            <td>
-                                <h4>$92.00</h4>
-                            </td>
-                        </tr>`;
-                } else {
-                    console.error('العنصر .cart table tbody غير موجود في الصفحة.');
-                }
-            })
-            .catch(error => console.error('خطأ:', error));
-    }
+    //             // تحقق إذا كان العنصر موجودًا
+    //             if (elementInCart) {
+    //                 // إضافة الصف إلى الجدول
+    //                 elementInCart.innerHTML += `
+    //                     <tr>
+    //                         <td>
+    //                             <i class="fa-regular fa-trash-can"></i>
+    //                         </td>
+    //                         <td>
+    //                             <img src="img/shop/1.jpg">
+    //                         </td>
+    //                         <td>
+    //                             <h4>Men's Fashion T-Shirt</h4>
+    //                         </td>
+    //                         <td>
+    //                             <h4>$92.00</h4>
+    //                         </td>
+    //                         <td>
+    //                             <input type="number" value="1">
+    //                         </td>
+    //                         <td>
+    //                             <h4>$92.00</h4>
+    //                         </td>
+    //                     </tr>`;
+    //             } else {
+    //                 console.error('العنصر .cart table tbody غير موجود في الصفحة.');
+    //             }
+    //         })
+    //         .catch(error => console.error('خطأ:', error));
+    // }
 });
