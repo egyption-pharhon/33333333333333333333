@@ -172,8 +172,9 @@ function loadCart() {
                     <h4>$${product.price}</h4>
                 </td>
             </tr>`;
+	    updateTotalPrice(product.id);
     });
-            updateTotalPrice(id);
+            
 
 }
 // Function to delete an item from the cart
