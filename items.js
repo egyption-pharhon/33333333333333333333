@@ -118,7 +118,6 @@ let activeProductDetails = document.querySelector('.contentOfPage')
 			 <!-- ======================end other products====================== -->
 	 `; 
 	 activeImage = document.querySelector('.product .images .active')
-	featureProduct = document.querySelector('#product .container .content')
 }
 //  change color of product
  
@@ -126,7 +125,10 @@ let activeProductDetails = document.querySelector('.contentOfPage')
 function changeColor(newImage){
 	activeImage.src = newImage
 }
-console.log(featureProduct)
+setTimeout(() => {
+    featureProduct = document.querySelector('#product .container .content');
+    console.log(featureProduct); // تحقق هنا
+}, 100);
 // product in webpage
 function addproducts(fileName, locationOfProducts){
 	fetch('product.json')
