@@ -156,6 +156,13 @@ function loadCart() {
 
     // Add event listeners for delete icons and input changes
     attachEventListeners();
+	
+	  document.querySelectorAll('.amount-input').forEach(input => {
+        input.addEventListener('change', (e) => {
+            const id = parseInt(e.target.dataset.id);
+            updateTotalPrice(id);
+        });
+    });
 }
 
 function attachEventListeners() {
@@ -166,12 +173,7 @@ function attachEventListeners() {
         });
     });
 
-    document.querySelectorAll('.amount-input').forEach(input => {
-        input.addEventListener('change', (e) => {
-            const id = parseInt(e.target.dataset.id);
-            updateTotalPrice(id);
-        });
-    });
+  
 }
 
 function updateTotalPrice(id) {
