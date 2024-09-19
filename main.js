@@ -216,6 +216,7 @@ function calculateTotal() {
         const price = allproduct.find(product => product.id === id).price;
         totalofall += input.value * price;
     });
+}
 // لاستدعاء loadCart عند تحميل الصفحة
 window.onload = loadCart;
 
