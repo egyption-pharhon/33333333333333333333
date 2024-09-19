@@ -46,7 +46,7 @@ let activeProductDetails = document.querySelector('.contentOfPage')
 			 </div>
 			 <!-- ======================end product====================== -->
 			 <!-- ======================start other products====================== -->
-			 <div class="products our-product">
+			 <div class="products our-product" id="product">
 				 <div class="container">
 					 <div class="header">
 						 <h3>Related Products</h3>
@@ -118,7 +118,7 @@ let activeProductDetails = document.querySelector('.contentOfPage')
 			 <!-- ======================end other products====================== -->
 	 `; 
 	 activeImage = document.querySelector('.product .images .active')
-	featureProduct = document.querySelector('.our-product .container .content')
+	featureProduct = document.querySelector('#product .container .content')
 }
 //  change color of product
  
