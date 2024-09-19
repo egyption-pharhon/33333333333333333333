@@ -99,41 +99,41 @@ function changeColor(newImage){
 
 
 
-    function addToCart(id) {
-        fetch('cart.html')
-            .then(response => response.text())
-            .then(data => {
-                elementInCart = document.querySelector('.cart table tbody');
-                console.log(elementInCart); // تحقق مما إذا كان العنصر موجودًا
+ //    function addToCart(id) {
+ //        fetch('cart.html')
+ //            .then(response => response.text())
+ //            .then(data => {
+ //                elementInCart = document.querySelector('.cart table tbody');
+ //                console.log(elementInCart); // تحقق مما إذا كان العنصر موجودًا
 
-                if (elementInCart) {
-                    elementInCart.innerHTML += `
-                        <tr>
-                            <td>
-                                <i class="fa-regular fa-trash-can"></i>
-                            </td>
-                            <td>
-                                <img src="img/shop/1.jpg">
-                            </td>
-                            <td>
-                                <h4>Men's Fashion T-Shirt</h4>
-                            </td>
-                            <td>
-                                <h4>$92.00</h4>
-                            </td>
-                            <td>
-                                <input type="number" value="1">
-                            </td>
-                            <td>
-                                <h4>$92.00</h4>
-                            </td>
-                        </tr>`;
-			 // أضف حدث الزر
-	console.log(document.getElementById('addElement'))
-    document.getElementById('addElement').addEventListener('click', function() {
-        addToCart(1);
-                })
-            })
+ //                if (elementInCart) {
+ //                    elementInCart.innerHTML += `
+ //                        <tr>
+ //                            <td>
+ //                                <i class="fa-regular fa-trash-can"></i>
+ //                            </td>
+ //                            <td>
+ //                                <img src="img/shop/1.jpg">
+ //                            </td>
+ //                            <td>
+ //                                <h4>Men's Fashion T-Shirt</h4>
+ //                            </td>
+ //                            <td>
+ //                                <h4>$92.00</h4>
+ //                            </td>
+ //                            <td>
+ //                                <input type="number" value="1">
+ //                            </td>
+ //                            <td>
+ //                                <h4>$92.00</h4>
+ //                            </td>
+ //                        </tr>`;
+	// 		 // أضف حدث الزر
+	// console.log(document.getElementById('addElement'))
+ //    document.getElementById('addElement').addEventListener('click', function() {
+ //        addToCart(1);
+ //                })
+ //            })
     
    
-	console.log(elementInCart)
+	// console.log(elementInCart)
