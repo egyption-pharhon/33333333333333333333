@@ -126,7 +126,7 @@ function addToCart(id) {
                         <h4>$${ allproduct[id].price}</h4>
                     </td>
                     <td>
-                        <input type="number" value="1" class="amount-input">
+                         <input type="number" value="1" min="1" class="amount-input" data-id="${product.id}">
                     </td>
                     <td>
                         <h4>$${ allproduct[id].price}</h4>
@@ -167,7 +167,7 @@ function loadCart() {
                     <h4>$${product.price}</h4>
                 </td>
                 <td>
-                    <input type="number" value="1" class="amount-input">
+                    <input type="number" value="1" min="1" class="amount-input" data-id="${product.id}">
                 </td>
                 <td>
                     <h4>$${product.price}</h4>
@@ -199,7 +199,7 @@ function deleteFromCart(id) {
 
 function updateTotalPrice(id) {
     const input = document.querySelector(`.amount-input[data-id="${id}"]`);
-    const price = allproduct.find(product => product.id === id).price;
+    const price = allproduct[id].price;
     const totalPriceElement = document.querySelector(`#product-${id} .total-price`);
     totalPriceElement.innerText = `$${(input.value * price).toFixed(2)}`;
 	totalofall +=(input.value * price).toFixed(2)
