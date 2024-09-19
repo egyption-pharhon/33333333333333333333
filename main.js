@@ -135,7 +135,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
     // أضف حدث الزر
-    document.getElementById('addToCartButton').addEventListener('click', function() {
+    document.getElementById('addElement').addEventListener('click', function() {
         addToCart(1);
     });
 });
