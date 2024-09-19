@@ -173,13 +173,8 @@ function loadCart() {
                 </td>
             </tr>`;
     });
-
-    document.querySelectorAll('.amount-input').forEach(input => {
-        input.addEventListener('change', (e) => {
-            const id = parseInt(e.target.dataset.id);
             updateTotalPrice(id);
-        });
-    });
+
 }
 // Function to delete an item from the cart
 function deleteFromCart(id) {
