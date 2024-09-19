@@ -112,7 +112,7 @@ function addToCart(id) {
 
             // إضافة المنتج إلى واجهة المستخدم
             elementInCart.innerHTML += `
-                <tr id="product-${id}">
+                <tr id="product-${allproduct[id].id}">
                     <td>
                         <i class="fa-regular fa-trash-can" onclick="deleteFromCart(${allproduct[id].id})"></i>
                     </td>
@@ -153,7 +153,7 @@ function loadCart() {
 
     cart.forEach(product => {
         tbody.innerHTML += `
-            <tr id="product-${id}">
+            <tr id="product-${product.id}">
                 <td>
                     <i class="fa-regular fa-trash-can" onclick="deleteFromCart(${product.id})"></i>
                 </td>
