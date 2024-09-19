@@ -203,14 +203,19 @@ function updateTotalPrice(id) {
     const price = allproduct.find(product => product.id === id).price;
     const totalPriceElement = document.querySelector(`#product-${id} .total-price`);
     totalPriceElement.innerText = `$${(input.value * price).toFixed(2)}`;
-	input.forEach((inpo)=>{
-		totalofall = parseInt(inpo.value * price)
-	console.log(totalofall)
-	}
-}
-function alloftotal(id){
 	
+	
+	calculateTotal()
 }
+function calculateTotal() {
+    totalofall = 0; // إعادة تعيين المجموع الكلي
+    const inputs = document.querySelectorAll('.amount-input');
+    
+    inputs.forEach(input => {
+        const id = parseInt(input.dataset.id);
+        const price = allproduct.find(product => product.id === id).price;
+        totalofall += input.value * price;
+    });
 // لاستدعاء loadCart عند تحميل الصفحة
 window.onload = loadCart;
 
