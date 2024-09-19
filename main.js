@@ -102,7 +102,7 @@ function addToCart(id){
 	fetch('cart.html')
 				.then(response => response.text())
 				.then(data => {
-					const elementInCart =document.querySelector('.cart table .element-in-cart')
+					const elementInCart =document.querySelector('.cart table tbody')
 					console.log(elementInCart)
 						// elementInCart.innerHTML +=`
       // <tr>
