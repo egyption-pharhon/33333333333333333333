@@ -10,7 +10,6 @@ let allproduct =[]
 
 let activeImage;
 
-function openProduct(id){
 	function openProduct(id) {
 		activeProductDetails.innerHTML =`
 			 <!-- ======================start product====================== -->
