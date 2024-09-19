@@ -103,98 +103,94 @@ function addToCart(id) {
     fetch('cart.html')
         .then(response => response.text())
         .then(data => {
-            // Create a new DOM parser
             const parser = new DOMParser();
-            // Parse the HTML string into a document
             const doc = parser.parseFromString(data, 'text/html');
-            // Query for the element in the parsed document
             const elementInCart = doc.querySelector('.cart table tbody');
-            console.log(elementInCart); // Check if the element exists
-            // إضافة المنتج إلى واجهة المستخدم
-            elementInCart.innerHTML += `
-                <tr id="product-${allproduct[id].id}">
-                    <td>
-                        <i class="fa-regular fa-trash-can" onclick="deleteFromCart(${allproduct[id].id})"></i>
-                    </td>
-                    <td>
-                        <img src="${ allproduct[id].img}">
-                    </td>
-                    <td>
-                        <h4>${ allproduct[id].name}</h4>
-                    </td>
-                    <td>
-                        <h4>$${ allproduct[id].price}</h4>
-                    </td>
-                    <td>
-                      <input type="number" value="1" min="1" data-id="${allproduct[id].id}">
-                    </td>
-                    <td>
-                        <h4>$${ allproduct[id].price}</h4>
-                    </td>
-                </tr>`;
 
-            // جلب عربة التسوق الحالية من localStorage أو تهيئتها
+            // Add product to the UI
+            const newRow = createCartRow(allproduct[id]);
+            elementInCart.innerHTML += newRow;
+
+            // Save to localStorage
             let cart = JSON.parse(localStorage.getItem('cart')) || [];
-            // إضافة المنتج إلى عربة التسوق
             cart.push(allproduct[id]);
-            // تحديث localStorage
             localStorage.setItem('cart', JSON.stringify(cart));
-	updateTotalPrice()
         })
         .catch(error => {
             console.error('Error fetching cart:', error);
         });
 }
 
-// لتحميل عربة التسوق عند تحميل الصفحة
+function createCartRow(product) {
+    return `
+        <tr id="product-${product.id}">
+            <td>
+                <i class="fa-regular fa-trash-can" data-id="${product.id}"></i>
+            </td>
+            <td>
+                <img src="${product.img}">
+            </td>
+            <td>
+                <h4>${product.name}</h4>
+            </td>
+            <td>
+                <h4>$${product.price}</h4>
+            </td>
+            <td>
+                <input type="number" value="1" min="1" class="amount-input" data-id="${product.id}">
+            </td>
+            <td>
+                <h4 class="total-price">$${product.price}</h4>
+            </td>
+        </tr>`;
+}
+
 function loadCart() {
     const cart = JSON.parse(localStorage.getItem('cart')) || [];
     const tbody = document.querySelector('.cart table tbody');
+
     cart.forEach(product => {
-        tbody.innerHTML += `
-            <tr id="product-${product.id}">
-                <td>
-                    <i class="fa-regular fa-trash-can" onclick="deleteFromCart(${product.id})"></i>
-                </td>
-                <td>
-                    <img src="${product.img}">
-                </td>
-                <td>
-                    <h4>${product.name}</h4>
-                </td>
-                <td>
-                    <h4>$${product.price}</h4>
-                </td>
-                <td>
-                    <input type="number" value="1" min="1" data-id="${product.id}">
-                </td>
-                <td>
-                    <h4 class="total-price">$${ product.price}</h4>
-                </td>
-            </tr>`;
+        const newRow = createCartRow(product);
+        tbody.innerHTML += newRow;
+    });
+
+    // Add event listeners for delete icons and input changes
+    attachEventListeners();
+}
+
+function attachEventListeners() {
+    document.querySelectorAll('.fa-trash-can').forEach(icon => {
+        icon.addEventListener('click', (e) => {
+            const id = parseInt(e.target.dataset.id);
+            deleteFromCart(id);
+        });
+    });
+
+    document.querySelectorAll('.amount-input').forEach(input => {
+        input.addEventListener('change', (e) => {
+            const id = parseInt(e.target.dataset.id);
+            updateTotalPrice(id);
+        });
     });
 }
-// Function to delete an item from the cart
-function deleteFromCart(id) {
-    // Get the current cart
-    let cart = JSON.parse(localStorage.getItem('cart')) || [];
-    // Filter out the item to be deleted
-    cart = cart.filter(product => product.id !== id);
-    // Update localStorage
-    localStorage.setItem('cart', JSON.stringify(cart));
-    
-    // Update the UI
-    const row = document.getElementById(`product-${id}`);
-    if (row) {
-        row.remove(); // Remove the row from the table
-    }
-}
+
 function updateTotalPrice(id) {
-    const input = document.querySelector(`.cart input[type="number"][data-id="${id}"]`);
-    const price = allproduct[id].price;
+    const input = document.querySelector(`.amount-input[data-id="${id}"]`);
+    const price = allproduct.find(product => product.id === id).price;
     const totalPriceElement = document.querySelector(`#product-${id} .total-price`);
     totalPriceElement.innerText = `$${(input.value * price).toFixed(2)}`;
 }
 
-// لاستدعاء loadCart عند تحميل الصفحة
+function deleteFromCart(id) {
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    cart = cart.filter(product => product.id !== id);
+    localStorage.setItem('cart', JSON.stringify(cart));
+
+    const row = document.getElementById(`product-${id}`);
+    if (row) {
+        row.remove();
+    }
+}
+
 window.onload = loadCart;
+
