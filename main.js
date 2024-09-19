@@ -99,13 +99,13 @@ function changeColor(newImage){
 
 
 
- //    function addToCart(id) {
- //        fetch('cart.html')
- //            .then(response => response.text())
- //            .then(data => {
- //                elementInCart = document.querySelector('.cart table tbody');
- //                console.log(elementInCart); // تحقق مما إذا كان العنصر موجودًا
-
+    function addToCart(id) {
+        fetch('cart.html')
+            .then(response => response.text())
+            .then(data => {
+                elementInCart = document.querySelector('.cart table tbody');
+                console.log(data); // تحقق مما إذا كان العنصر موجودًا
+	    })}
  //                if (elementInCart) {
  //                    elementInCart.innerHTML += `
  //                        <tr>
