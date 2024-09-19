@@ -52,66 +52,7 @@ let activeProductDetails = document.querySelector('.contentOfPage')
 						 <h3>Related Products</h3>
 					 </div>
 					 <div class="content">
-                      <div class="box t-shirt">
-						<div class="image">
-							<img src="img/shop/1.jpg">
-						</div>
-						<div class="stars">
-							<i class="fas fa-star"></i>
-							<i class="fas fa-star"></i>
-							<i class="fas fa-star"></i>
-							<i class="fas fa-star"></i>
-							<i class="fas fa-star"></i>
-						</div>
-						<p>Sport Boots</p>
-						<span>$92.00</span>
-						<button type="">Buy Now</button>
-					</div>
-					<div class="box">
-						<div class="image">
-							<img src="img/shop/2.jpg">
-						</div>
-						<div class="stars">
-							<i class="fas fa-star"></i>
-							<i class="fas fa-star"></i>
-							<i class="fas fa-star"></i>
-							<i class="fas fa-star"></i>
-							<i class="fas fa-star"></i>
-						</div>
-						<p>Sport Boots</p>
-						<span>$92.00</span>
-						<button type="">Buy Now</button>
-					</div>
-					<div class="box">
-						<div class="image">
-							<img src="img/shop/3.jpg">
-						</div>
-						<div class="stars">
-							<i class="fas fa-star"></i>
-							<i class="fas fa-star"></i>
-							<i class="fas fa-star"></i>
-							<i class="fas fa-star"></i>
-							<i class="fas fa-star"></i>
-						</div>
-						<p>Sport Boots</p>
-						<span>$92.00</span>
-						<button type="">Buy Now</button>
-					</div>
-					<div class="box">
-						<div class="image">
-							<img src="img/shop/4.jpg">
-						</div>
-						<div class="stars">
-							<i class="fas fa-star"></i>
-							<i class="fas fa-star"></i>
-							<i class="fas fa-star"></i>
-							<i class="fas fa-star"></i>
-							<i class="fas fa-star"></i>
-						</div>
-						<p>Sport Boots</p>
-						<span>$92.00</span>
-						<button type="">Buy Now</button>
-					</div>
+                    
 					 </div>
 				 </div>
 			 </div>
@@ -119,8 +60,7 @@ let activeProductDetails = document.querySelector('.contentOfPage')
 	 `; 
 	 activeImage = document.querySelector('.product .images .active')
 setTimeout(() => {
-    featureProduct = document.querySelector('#product .container .content');
-    console.log(featureProduct); // تحقق هنا
+ addproducts('Feature', '#product .container .content')
 }, 100);
 }
 //  change color of product
@@ -167,3 +107,63 @@ addproducts('shop', '.shop .content');
 addproducts('Featured', '.featured .content');
 addproducts('Dresses', '.dresses-jumpsuits .content');
 addproducts('Shoes', '.shoes .content');
+  // <div class="box t-shirt">
+		// 				<div class="image">
+		// 					<img src="img/shop/1.jpg">
+		// 				</div>
+		// 				<div class="stars">
+		// 					<i class="fas fa-star"></i>
+		// 					<i class="fas fa-star"></i>
+		// 					<i class="fas fa-star"></i>
+		// 					<i class="fas fa-star"></i>
+		// 					<i class="fas fa-star"></i>
+		// 				</div>
+		// 				<p>Sport Boots</p>
+		// 				<span>$92.00</span>
+		// 				<button type="">Buy Now</button>
+		// 			</div>
+		// 			<div class="box">
+		// 				<div class="image">
+		// 					<img src="img/shop/2.jpg">
+		// 				</div>
+		// 				<div class="stars">
+		// 					<i class="fas fa-star"></i>
+		// 					<i class="fas fa-star"></i>
+		// 					<i class="fas fa-star"></i>
+		// 					<i class="fas fa-star"></i>
+		// 					<i class="fas fa-star"></i>
+		// 				</div>
+		// 				<p>Sport Boots</p>
+		// 				<span>$92.00</span>
+		// 				<button type="">Buy Now</button>
+		// 			</div>
+		// 			<div class="box">
+		// 				<div class="image">
+		// 					<img src="img/shop/3.jpg">
+		// 				</div>
+		// 				<div class="stars">
+		// 					<i class="fas fa-star"></i>
+		// 					<i class="fas fa-star"></i>
+		// 					<i class="fas fa-star"></i>
+		// 					<i class="fas fa-star"></i>
+		// 					<i class="fas fa-star"></i>
+		// 				</div>
+		// 				<p>Sport Boots</p>
+		// 				<span>$92.00</span>
+		// 				<button type="">Buy Now</button>
+		// 			</div>
+		// 			<div class="box">
+		// 				<div class="image">
+		// 					<img src="img/shop/4.jpg">
+		// 				</div>
+		// 				<div class="stars">
+		// 					<i class="fas fa-star"></i>
+		// 					<i class="fas fa-star"></i>
+		// 					<i class="fas fa-star"></i>
+		// 					<i class="fas fa-star"></i>
+		// 					<i class="fas fa-star"></i>
+		// 				</div>
+		// 				<p>Sport Boots</p>
+		// 				<span>$92.00</span>
+		// 				<button type="">Buy Now</button>
+		// 			</div>
