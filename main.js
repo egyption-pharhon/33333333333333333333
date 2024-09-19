@@ -110,7 +110,8 @@ function addToCart(id) {
             // Query for the element in the parsed document
             const elementInCart = doc.querySelector('.cart table tbody');
             console.log(elementInCart); // Check if the element exists
-
+amountOfProduct = document.querySelector('.cart input[type="number"]').value
+		console.log(amountOfProduct)
             // إضافة المنتج إلى واجهة المستخدم
             elementInCart.innerHTML += `
                 <tr id="product-${allproduct[id].id}">
@@ -127,7 +128,7 @@ function addToCart(id) {
                         <h4>$${ allproduct[id].price}</h4>
                     </td>
                     <td>
-                        <input type="number" value="${amountOfProduct}" min="1">
+                        <input type="number" value="1" min="1">
                     </td>
                     <td>
                         <h4>$${ allproduct[id].price * amountOfProduct}</h4>
@@ -140,8 +141,7 @@ function addToCart(id) {
             cart.push(allproduct[id]);
             // تحديث localStorage
             localStorage.setItem('cart', JSON.stringify(cart));
-	amountOfProduct = document.querySelector('.cart input[type="number"]').value
-		console.log(amountOfProduct)
+	
         })
         .catch(error => {
             console.error('Error fetching cart:', error);
@@ -152,7 +152,8 @@ function addToCart(id) {
 function loadCart() {
     const cart = JSON.parse(localStorage.getItem('cart')) || [];
     const tbody = document.querySelector('.cart table tbody');
-
+amountOfProduct = document.querySelector('.cart input[type="number"]').value
+		console.log(amountOfProduct)
     cart.forEach(product => {
         tbody.innerHTML += `
             <tr id="product-${product.id}">
@@ -169,7 +170,7 @@ function loadCart() {
                     <h4>$${product.price}</h4>
                 </td>
                 <td>
-                    <input type="number" value="${amountOfProduct}" min="1">
+                    <input type="number" value="1" min="1">
                 </td>
                 <td>
                     <h4>$${ product.price * amountOfProduct}</h4>
