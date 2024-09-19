@@ -10,7 +10,6 @@ let allproduct =[]
 
 let activeImage;
 let featureProduct;
-let totalofall ;
 let activeProductDetails = document.querySelector('.contentOfPage')
 
 	function openProduct(id) {
@@ -98,7 +97,6 @@ function changeColor(newImage){
 }
 
 // add product to cart
-
 function addToCart(id) {
     fetch('cart.html')
         .then(response => response.text())
@@ -110,6 +108,7 @@ function addToCart(id) {
             // Query for the element in the parsed document
             const elementInCart = doc.querySelector('.cart table tbody');
             console.log(elementInCart); // Check if the element exists
+
             // إضافة المنتج إلى واجهة المستخدم
             elementInCart.innerHTML += `
                 <tr id="product-${allproduct[id].id}">
@@ -126,7 +125,7 @@ function addToCart(id) {
                         <h4>$${ allproduct[id].price}</h4>
                     </td>
                     <td>
-                      <input type="number" value="1" min="1" data-id="${allproduct[id].id}">
+                        <input type="number" value="1">
                     </td>
                     <td>
                         <h4>$${ allproduct[id].price}</h4>
@@ -139,7 +138,7 @@ function addToCart(id) {
             cart.push(allproduct[id]);
             // تحديث localStorage
             localStorage.setItem('cart', JSON.stringify(cart));
-	updateTotalPrice()
+
         })
         .catch(error => {
             console.error('Error fetching cart:', error);
@@ -150,6 +149,7 @@ function addToCart(id) {
 function loadCart() {
     const cart = JSON.parse(localStorage.getItem('cart')) || [];
     const tbody = document.querySelector('.cart table tbody');
+
     cart.forEach(product => {
         tbody.innerHTML += `
             <tr id="product-${product.id}">
@@ -166,12 +166,19 @@ function loadCart() {
                     <h4>$${product.price}</h4>
                 </td>
                 <td>
-                    <input type="number" value="1" min="1" data-id="${product.id}">
+                    <input type="number" value="1">
                 </td>
                 <td>
-                    <h4 class="total-price">$${ product.price}</h4>
+                    <h4>$${product.price}</h4>
                 </td>
             </tr>`;
+    });
+
+    document.querySelectorAll('.amount-input').forEach(input => {
+        input.addEventListener('change', (e) => {
+            const id = parseInt(e.target.dataset.id);
+            updateTotalPrice(id);
+        });
     });
 }
 // Function to delete an item from the cart
@@ -189,9 +196,10 @@ function deleteFromCart(id) {
         row.remove(); // Remove the row from the table
     }
 }
+
 function updateTotalPrice(id) {
-    const input = document.querySelector(`.cart input[type="number"][data-id="${id}"]`);
-    const price = allproduct[id].price;
+    const input = document.querySelector(`.amount-input[data-id="${id}"]`);
+    const price = allproduct.find(product => product.id === id).price;
     const totalPriceElement = document.querySelector(`#product-${id} .total-price`);
     totalPriceElement.innerText = `$${(input.value * price).toFixed(2)}`;
 }
