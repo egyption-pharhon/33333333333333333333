@@ -109,42 +109,36 @@ function addToCart(id) {
             // Query for the element in the parsed document
             const elementInCart = doc.querySelector('.cart table tbody');
             console.log(elementInCart); // Check if the element exists
-
-            // You can add your logic here to add the item to the cart
-            if (elementInCart) {
-                // Add your item logic here
-                console.log(`Item with ID ${id} added to cart.`);
-            } else {
-                console.log('Cart element not found.');
-            }
+	  elementInCart.innerHTML += `
+                        <tr>
+                            <td>
+                                <i class="fa-regular fa-trash-can"></i>
+                            </td>
+                            <td>
+                                <img src="img/shop/1.jpg">
+                            </td>
+                            <td>
+                                <h4>Men's Fashion T-Shirt</h4>
+                            </td>
+                            <td>
+                                <h4>$92.00</h4>
+                            </td>
+                            <td>
+                                <input type="number" value="1">
+                            </td>
+                            <td>
+                                <h4>$92.00</h4>
+                            </td>
+                        </tr>`;
+            
         })
         .catch(error => {
             console.error('Error fetching cart:', error);
         });
 }
 
- //                if (elementInCart) {
- //                    elementInCart.innerHTML += `
- //                        <tr>
- //                            <td>
- //                                <i class="fa-regular fa-trash-can"></i>
- //                            </td>
- //                            <td>
- //                                <img src="img/shop/1.jpg">
- //                            </td>
- //                            <td>
- //                                <h4>Men's Fashion T-Shirt</h4>
- //                            </td>
- //                            <td>
- //                                <h4>$92.00</h4>
- //                            </td>
- //                            <td>
- //                                <input type="number" value="1">
- //                            </td>
- //                            <td>
- //                                <h4>$92.00</h4>
- //                            </td>
- //                        </tr>`;
+                // if (elementInCart) {
+                  
 	// 		 // أضف حدث الزر
 	// console.log(document.getElementById('addElement'))
  //    document.getElementById('addElement').addEventListener('click', function() {
