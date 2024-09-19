@@ -127,10 +127,10 @@ function addToCart(id) {
                         <h4>$${ allproduct[id].price}</h4>
                     </td>
                     <td>
-                        <input type="number" value="${amountOfProduct}" min="1">
+                        <input type="number" value="1" min="1">
                     </td>
                     <td>
-                        <h4>$${ allproduct[id].price * amountOfProduct}</h4>
+                        <h4>$${ allproduct[id].price}</h4>
                     </td>
                 </tr>`;
 
@@ -140,7 +140,8 @@ function addToCart(id) {
             cart.push(allproduct[id]);
             // تحديث localStorage
             localStorage.setItem('cart', JSON.stringify(cart));
-
+	amountOfProduct = document.querySelector('td input[type="number"].value')
+		console.log(amountOfProduct)
         })
         .catch(error => {
             console.error('Error fetching cart:', error);
