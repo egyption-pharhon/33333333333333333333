@@ -60,7 +60,7 @@ let activeProductDetails = document.querySelector('.contentOfPage')
 	 `; 
 	 activeImage = document.querySelector('.product .images .active')
 setTimeout(() => {
- addproducts('Feature', '#product .container .content')
+	addproducts('Feature', '#product .container .content');
 }, 100);
 }
 //  change color of product
