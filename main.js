@@ -128,6 +128,10 @@ function changeColor(newImage){
                                 <h4>$92.00</h4>
                             </td>
                         </tr>`;
+			 // أضف حدث الزر
+	console.log(document.getElementById('addElement'))
+    document.getElementById('addElement').addEventListener('click', function() {
+        addToCart(1);
                 } else {
                     console.error('العنصر .cart table tbody غير موجود في الصفحة.');
                 }
@@ -135,10 +139,5 @@ function changeColor(newImage){
             .catch(error => console.error('خطأ:', error));
     }
     
-    // أضف حدث الزر
-	console.log(document.getElementById('addElement'))
-    document.getElementById('addElement').addEventListener('click', function() {
-        addToCart(1);
-    });
+   
 	console.log(elementInCart)
-});
