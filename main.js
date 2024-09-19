@@ -9,6 +9,7 @@ function openNavList(){
 let allproduct =[]
 
 let activeImage;
+let activeProductDetails = document.querySelector('.contentOfPage')
 
 	function openProduct(id) {
 		activeProductDetails.innerHTML =`
