@@ -20,10 +20,10 @@ function openProduct(id) {
 				<div class="images">
 					<img src="${ allproduct[id].img}" class="active">
 					<div class="color-product">
-						<img src="${ allproduct[id].productColors[0]}" onclick="changeColor(this.src)" id ="one">
-						<img src="${ allproduct[id].productColors[1]}" onclick="changeColor(this.src)" id ="two">
-						<img src="${ allproduct[id].productColors[2]}" onclick="changeColor(this.src)" id ="three">
-						<img src="${ allproduct[id].productColors[3]}" onclick="changeColor(this.src)" id ="four">
+						<img src="${ allproduct[id].productColors[0]}" onclick="changeColor(${ allproduct[id].productColors[0]}${ allproduct[id].productColors[0]}${ allproduct[id].productColors[0]}${ allproduct[id].productColors[0]})" id ="one">
+						<img src="${ allproduct[id].productColors[1]}" onclick="changeColor(${ allproduct[id].productColors[1]}${ allproduct[id].productColors[0]}${ allproduct[id].productColors[0]})" id ="two">
+						<img src="${ allproduct[id].productColors[2]}" onclick="changeColor(${ allproduct[id].productColors[2]}${ allproduct[id].productColors[0]})" id ="three">
+						<img src="${ allproduct[id].productColors[3]}" onclick="changeColor(${ allproduct[id].productColors[3]})" id ="four">
 					</div>
 				</div>
 				<div class="info">
