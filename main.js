@@ -32,11 +32,9 @@ let activeFour = document.querySelector('#farag .container .images .color-produc
 let activeDetails = document.querySelector('#farag .container .images .info p');
 let activeProductDetails = document.querySelector('body');
 
-let activeProduct = allProduct[id];
-
 function productDetails(id) {
     
-	console.log(activeProduct.img)
+	console.log( allProduct[id].img)
  activeProductDetails.innerHTML =`
 		<!-- ======================start header====================== -->
 		<header>
@@ -63,17 +61,17 @@ function productDetails(id) {
 		<div class="product">
 			<div class="container">
 				<div class="images">
-					<img src="${activeProduct.productColors[0]}" class="active">
+					<img src="${ allProduct[id].productColors[0]}" class="active">
 					<div class="color-product">
-						<img src="${activeProduct.productColors[0]}" onclick="changeColor(this.src)" id ="one">
-						<img src="${activeProduct.productColors[1]}" onclick="changeColor(this.src)" id ="two">
-						<img src="${activeProduct.productColors[2]}" onclick="changeColor(this.src)" id ="three">
-						<img src="${activeProduct.productColors[3]}" onclick="changeColor(this.src)" id ="four">
+						<img src="${ allProduct[id].productColors[0]}" onclick="changeColor(this.src)" id ="one">
+						<img src="${ allProduct[id].productColors[1]}" onclick="changeColor(this.src)" id ="two">
+						<img src="${ allProduct[id].productColors[2]}" onclick="changeColor(this.src)" id ="three">
+						<img src="${ allProduct[id].productColors[3]}" onclick="changeColor(this.src)" id ="four">
 					</div>
 				</div>
 				<div class="info">
-					<span>${activeProduct.category}</span>
-					<h3>${activeProduct.name}</h3>
+					<span>${ allProduct[id].category}</span>
+					<h3>${ allProduct[id].name}</h3>
 					<span class="price">${activeProduct.price}</span>
 					<select>
 						<option>Select Size</option>
@@ -85,7 +83,7 @@ function productDetails(id) {
 					<input type="number" value="1">
 					<button>Add to Cart</button>
 					<h4>Product Details</h4>
-					<p>${activeProduct.ProductDetails}</p>
+					<p>${ allProduct[id].ProductDetails}</p>
 				</div>
 			</div>
 		</div>
