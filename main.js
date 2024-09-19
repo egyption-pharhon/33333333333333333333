@@ -10,7 +10,8 @@ let allproduct =[]
 
 let activeImage;
 let featureProduct;
-let totalofall =0; 
+let totalofall =0;
+let shipping = 35;
 let activeProductDetails = document.querySelector('.contentOfPage')
 
 	function openProduct(id) {
@@ -216,6 +217,9 @@ function calculateTotal() {
         const price = allproduct.find(product => product.id === id).price;
         totalofall += input.value * price;
     });
+	    document.querySelector('.cart-total .subtotal').innerHTML =`$${totalofall}`;
+    document.querySelector('.cart-total .shipping').innerHTML =`$${shipping}`;
+    document.querySelector('.cart-total .total').innerHTML =`$${totalofall + shipping}`;
 }
 // لاستدعاء loadCart عند تحميل الصفحة
 window.onload = loadCart;
