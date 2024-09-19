@@ -45,7 +45,7 @@ fetch('product.json')
 
 				
 				data.forEach( product => {
-					if(product.section === Featured){
+					if(product.section === 'Featured'){
 					products.innerHTML += `
 						<div class="box">
 							<div class="image">
