@@ -46,10 +46,10 @@ function openProduct(id) {
 				<div class="images">
 					<img src="${ allproduct[id].img}" class="active">
 					<div class="color-product">
-						<img src="${ allproduct[id].productColors[0]}" onclick="changeColor(${ allproduct[id].productColors[0]} , ${ allproduct[id].img})" id ="one">
-						<img src="${ allproduct[id].productColors[1]}" onclick="changeColor(${ allproduct[id].productColors[1]} , ${ allproduct[id].img})" id ="two">
-						<img src="${ allproduct[id].productColors[2]}" onclick="changeColor(${ allproduct[id].productColors[2]} , ${ allproduct[id].img})" id ="three">
-						<img src="${ allproduct[id].productColors[3]}" onclick="changeColor(${ allproduct[id].productColors[3]} , ${ allproduct[id].img})" id ="four">
+						<img src="${ allproduct[id].productColors[0]}" onclick="changeColor(${ allproduct[id].productColors[0]})" id ="one">
+						<img src="${ allproduct[id].productColors[1]}" onclick="changeColor(${ allproduct[id].productColors[1]})" id ="two">
+						<img src="${ allproduct[id].productColors[2]}" onclick="changeColor(${ allproduct[id].productColors[2]})" id ="three">
+						<img src="${ allproduct[id].productColors[3]}" onclick="changeColor(${ allproduct[id].productColors[3]})" id ="four">
 					</div>
 				</div>
 				<div class="info">
@@ -75,5 +75,13 @@ function openProduct(id) {
 `;
 }
 
+let activeImage = document.querySelector('.product .images .active');
 
+function changeColor(newImage) {
+    if (activeImage) {
+        activeImage.src = newImage;
+    } else {
+        console.error('عنصر الصورة النشط غير موجود');
+    }
+}
 
