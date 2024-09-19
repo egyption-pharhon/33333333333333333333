@@ -10,6 +10,7 @@ let allproduct =[]
 
 let activeImage;
 let featureProduct;
+let elementInCart;
 let activeProductDetails = document.querySelector('.contentOfPage')
 
 	function openProduct(id) {
@@ -96,7 +97,7 @@ function changeColor(newImage){
 	activeImage.src = newImage
 }
 
-const elementInCart ;
+
 
     function addToCart(id) {
         fetch('cart.html')
