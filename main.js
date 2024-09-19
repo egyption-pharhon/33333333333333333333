@@ -97,33 +97,45 @@ function changeColor(newImage){
 }
 
 
-document.querySelector('#addElement').addEventListener('click', addToCart(1) );
+document.addEventListener('DOMContentLoaded', function() {
+    function addToCart(id) {
+        fetch('cart.html')
+            .then(response => response.text())
+            .then(data => {
+                const elementInCart = document.querySelector('.cart table tbody');
+                console.log(elementInCart); // تحقق مما إذا كان العنصر موجودًا
 
-// add product to cart
-function addToCart(id){
-	fetch('cart.html')
-				.then(response => response.text())
-				.then(data => {
-					let elementInCart =document.querySelector('.cart table .element-in-cart')
-						elementInCart.innerHTML +=`<tr>
-								<td>
-									<i class="fa-regular fa-trash-can"></i>
-								</td>
-								<td>
-									<img src="img/shop/1.jpg">
-								</td>
-								<td>
-									<h4>Men's Fashion T-Shirt</h4>
-								</td>
-								<td>
-									<h4>$92.00</h4>
-								</td>
-								<td>
-									<input type="number" value="1">
-								</td>
-								<td>
-									<h4>$92.00</h4>
-								</td>
-							</tr>`
-				})
-}
+                if (elementInCart) {
+                    elementInCart.innerHTML += `
+                        <tr>
+                            <td>
+                                <i class="fa-regular fa-trash-can"></i>
+                            </td>
+                            <td>
+                                <img src="img/shop/1.jpg">
+                            </td>
+                            <td>
+                                <h4>Men's Fashion T-Shirt</h4>
+                            </td>
+                            <td>
+                                <h4>$92.00</h4>
+                            </td>
+                            <td>
+                                <input type="number" value="1">
+                            </td>
+                            <td>
+                                <h4>$92.00</h4>
+                            </td>
+                        </tr>`;
+                } else {
+                    console.error('العنصر .cart table tbody غير موجود في الصفحة.');
+                }
+            })
+            .catch(error => console.error('خطأ:', error));
+    }
+    
+    // أضف حدث الزر
+    document.getElementById('addToCartButton').addEventListener('click', function() {
+        addToCart(1);
+    });
+});
