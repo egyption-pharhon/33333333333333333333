@@ -98,7 +98,6 @@ function changeColor(newImage){
 
 
 // add product to cart
-document.addEventListener('DOMContentLoaded', function() {
 function addToCart(id){
 	fetch('cart.html')
 				.then(response => response.text())
@@ -126,7 +125,6 @@ function addToCart(id){
 									<h4>$92.00</h4>
 								</td>
 							</tr>`;
-					})
 					})
 		
 }
