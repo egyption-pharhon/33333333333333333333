@@ -158,19 +158,19 @@ function loadCart() {
                     <i class="fa-regular fa-trash-can"></i>
                 </td>
                 <td>
-                    <img src="${product.image}">
+                    <img src="${product.img}">
                 </td>
                 <td>
                     <h4>${product.name}</h4>
                 </td>
                 <td>
-                    <h4>$${product.price.toFixed(2)}</h4>
+                    <h4>$${product.price)}</h4>
                 </td>
                 <td>
-                    <input type="number" value="${product.quantity}">
+                    <input type="number" value="1">
                 </td>
                 <td>
-                    <h4>$${(product.price * product.quantity).toFixed(2)}</h4>
+                    <h4>$${(product.price}</h4>
                 </td>
             </tr>`;
     });
