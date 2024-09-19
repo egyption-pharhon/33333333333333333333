@@ -34,4 +34,4 @@ addproducts('shop', '.shop .content');
 addproducts('Featured', '.featured .content');
 addproducts('Dresses', '.dresses-jumpsuits .content');
 addproducts('Shoes', '.shoes .content');
-addproducts('Featured', featuredProduct);	
+addproducts('Featured', featureProduct);	
