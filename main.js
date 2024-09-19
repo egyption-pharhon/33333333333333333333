@@ -170,7 +170,7 @@ function loadCart() {
                     <input type="number" value="1">
                 </td>
                 <td>
-                    <h4>$${(product.price}</h4>
+                    <h4>$${product.price}</h4>
                 </td>
             </tr>`;
     });
