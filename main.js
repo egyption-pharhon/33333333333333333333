@@ -104,7 +104,7 @@ function changeColor(newImage){
             .then(response => response.text())
             .then(data => {
                 elementInCart = document.querySelector('.cart table tbody');
-                console.log(data); // تحقق مما إذا كان العنصر موجودًا
+                console.log(elementInCart); // تحقق مما إذا كان العنصر موجودًا
 	    })}
  //                if (elementInCart) {
  //                    elementInCart.innerHTML += `
