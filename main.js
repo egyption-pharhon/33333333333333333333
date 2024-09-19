@@ -103,7 +103,7 @@ function changeColor(newImage){
         fetch('cart.html')
             .then(response => response.text())
             .then(data => {
-                elementInCart = document.querySelector('.cart table tbody');
+                elementInCart = data.querySelector('.cart table tbody');
                 console.log(elementInCart); // تحقق مما إذا كان العنصر موجودًا
 	    })}
  //                if (elementInCart) {
