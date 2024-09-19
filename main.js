@@ -111,24 +111,24 @@ function addToCart(id) {
 
             // إضافة المنتج إلى واجهة المستخدم
             elementInCart.innerHTML += `
-               <tr id="product-${product.id}">
+               <tr id="product-${allproduct[id].id}">
             <td>
-                <i class="fa-regular fa-trash-can" data-id="${product.id}"></i>
+                <i class="fa-regular fa-trash-can" data-id="${allproduct[id].id}"></i>
             </td>
             <td>
-                <img src="${product.img}">
+                <img src="${allproduct[id].img}">
             </td>
             <td>
-                <h4>${product.name}</h4>
+                <h4>${allproduct[id].name}</h4>
             </td>
             <td>
-                <h4>$${product.price}</h4>
+                <h4>$${allproduct[id].price}</h4>
             </td>
             <td>
-                <input type="number" value="1" min="1" class="amount-input" data-id="${product.id}">
+                <input type="number" value="1" min="1" class="amount-input" data-id="${allproduct[id].id}">
             </td>
             <td>
-                <h4 class="total-price">$${product.price}</h4>
+                <h4 class="total-price">$${allproduct[id].price}</h4>
             </td>
         </tr>`;
 
