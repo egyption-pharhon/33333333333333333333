@@ -10,7 +10,7 @@ let allproduct =[]
 
 let activeImage;
 let featureProduct;
-let totalofall =0;
+let totalOfAllProductInCart = 0;
 let shipping = 35;
 let activeProductDetails = document.querySelector('.contentOfPage')
 
