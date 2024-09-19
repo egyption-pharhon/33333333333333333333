@@ -68,23 +68,24 @@ let activeProductDetails = document.querySelector('.contentOfPage')
 					allproduct =data;
 					data.forEach( product => {
 						if(product.section === "Featured"){
-						featureProduct.innerHTML += `
-							<div class="box">
-								<div class="image">
-									<img src="${product.img}">
-								</div>
-								<div class="stars">
-									<i class="fas fa-star"></i>
-									<i class="fas fa-star"></i>
-									<i class="fas fa-star"></i>
-									<i class="fas fa-star"></i>
-									<i class="fas fa-star"></i>
-								</div>
-								<p onclick="openProduct(${product.id})" product-id="${product.id}">${product.name}</p>
-								<span>$${product.price}</span>
-								<button onclick="addToCart(${product.id})">Add Cart</button>
-							</div>`
-						}})
+							featureProduct.innerHTML += `
+								<div class="box">
+									<div class="image">
+										<img src="${product.img}">
+									</div>
+									<div class="stars">
+										<i class="fas fa-star"></i>
+										<i class="fas fa-star"></i>
+										<i class="fas fa-star"></i>
+										<i class="fas fa-star"></i>
+										<i class="fas fa-star"></i>
+									</div>
+									<p onclick="openProduct(${product.id})" product-id="${product.id}">${product.name}</p>
+									<span>$${product.price}</span>
+									<button onclick="addToCart(${product.id})">Add Cart</button>
+								</div>`
+						}
+					})
 				})
 	}, 100);
 }
@@ -93,4 +94,35 @@ let activeProductDetails = document.querySelector('.contentOfPage')
  
 function changeColor(newImage){
 	activeImage.src = newImage
+}
+
+
+// add product to cart
+function addToCart(id){
+	fetch('cart.html')
+				.then(response => response.text())
+				.then(data => {
+					let elementInCart =document.querySelector('.cart table .element-in-cart')
+						elementInCart.innerHTML +=`<tr>
+								<td>
+									<i class="fa-regular fa-trash-can"></i>
+								</td>
+								<td>
+									<img src="img/shop/1.jpg">
+								</td>
+								<td>
+									<h4>Men's Fashion T-Shirt</h4>
+								</td>
+								<td>
+									<h4>$92.00</h4>
+								</td>
+								<td>
+									<input type="number" value="1">
+								</td>
+								<td>
+									<h4>$92.00</h4>
+								</td>
+							</tr>`
+					})
+				})
 }
