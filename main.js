@@ -243,7 +243,7 @@ function totalOfAllProducts() {
     });
 
     document.querySelector('.cart-total .subtotal').innerHTML =`${totalofall}`;
-    document.querySelector('.cart-total .shipping').innerHTML =`${totalofall}`;
+    document.querySelector('.cart-total .shipping').innerHTML =`${shipping}`;
     document.querySelector('.cart-total .total').innerHTML =`${(totalofall + shipping).toFixed(2)}`;
 }
 
