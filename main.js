@@ -124,5 +124,5 @@ function addToCart(id){
 								</td>
 							</tr>`
 					})
-				})
+		
 }
