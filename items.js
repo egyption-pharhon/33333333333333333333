@@ -13,7 +13,7 @@ let featureProduct;
 let activeProductDetails = document.querySelector('.contentOfPage')
 
 	function openProduct(id) {
-		activeProductDetails.innerHTML =
+		activeProductDetails.innerHTML =`
 			 <!-- ======================start product====================== -->
 			 <div class="product">
 				 <div class="container">
@@ -116,7 +116,7 @@ let activeProductDetails = document.querySelector('.contentOfPage')
 				 </div>
 			 </div>
 			 <!-- ======================end other products====================== -->
-	 ; 
+	 `; 
 	 activeImage = document.querySelector('.product .images .active')
 	featureProduct = document.querySelector('.our-product .container .content')
 }
