@@ -202,8 +202,10 @@ function updateTotalPrice(id) {
     const price = allproduct[id].price;
     const totalPriceElement = document.querySelector(`#product-${id} .total-price`);
     totalPriceElement.innerText = `$${(input.value * price).toFixed(2)}`;
-	totalofall +=(input.value * price).toFixed(2)
-	console.log(totalofall)
+	totalofall = 0; // إعادة تعيين المجموع
+    document.querySelectorAll('.amount-input').forEach(input => {
+        totalofall += (input.value * allproduct[parseInt(input.dataset.id)].price);
+    });
 }
 // لاستدعاء loadCart عند تحميل الصفحة
 window.onload = loadCart;
