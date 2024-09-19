@@ -111,26 +111,26 @@ function addToCart(id) {
 
             // إضافة المنتج إلى واجهة المستخدم
             elementInCart.innerHTML += `
-                <tr id="product-${allproduct[id].id}">
-                    <td>
-                        <i class="fa-regular fa-trash-can" onclick="deleteFromCart(${allproduct[id].id})"></i>
-                    </td>
-                    <td>
-                        <img src="${ allproduct[id].img}">
-                    </td>
-                    <td>
-                        <h4>${ allproduct[id].name}</h4>
-                    </td>
-                    <td>
-                        <h4>$${ allproduct[id].price}</h4>
-                    </td>
-                    <td>
-                        <input type="number" value="1">
-                    </td>
-                    <td>
-                        <h4>$${ allproduct[id].price}</h4>
-                    </td>
-                </tr>`;
+               <tr id="product-${product.id}">
+            <td>
+                <i class="fa-regular fa-trash-can" data-id="${product.id}"></i>
+            </td>
+            <td>
+                <img src="${product.img}">
+            </td>
+            <td>
+                <h4>${product.name}</h4>
+            </td>
+            <td>
+                <h4>$${product.price}</h4>
+            </td>
+            <td>
+                <input type="number" value="1" min="1" class="amount-input" data-id="${product.id}">
+            </td>
+            <td>
+                <h4 class="total-price">$${product.price}</h4>
+            </td>
+        </tr>`;
 
             // جلب عربة التسوق الحالية من localStorage أو تهيئتها
             let cart = JSON.parse(localStorage.getItem('cart')) || [];
