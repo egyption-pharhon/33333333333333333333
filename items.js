@@ -73,9 +73,7 @@ function openProduct(id) {
 		<!-- ======================end product====================== -->
 		
 `;
-}
-
-let activeImage = document.querySelector('.product .images .active');
+	let activeImage = document.querySelector('.product .images .active');
 
 function changeColor(newImage) {
     if (activeImage) {
@@ -84,4 +82,7 @@ function changeColor(newImage) {
         console.error('عنصر الصورة النشط غير موجود:', activeImage);
     }
 }
+}
+
+
 
