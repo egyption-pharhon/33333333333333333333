@@ -38,7 +38,7 @@ let activeProductDetails = document.querySelector('.contentOfPage')
 							 <option>Large</option>
 						 </select>
 						 <input type="number" value="1">
-						 <button>Add to Cart</button>
+						 <button onclick="addToCart(${allproduct[id].id})">Add to Cart</button>
 						 <h4>Product Details</h4>
 						 <p>${ allproduct[id].ProductDetails}</p>
 					 </div>
