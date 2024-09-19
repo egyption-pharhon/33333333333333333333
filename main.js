@@ -112,25 +112,25 @@ function addToCart(id) {
             // إضافة المنتج إلى واجهة المستخدم
             elementInCart.innerHTML += `
                <tr id="product-${allproduct[id].id}">
-            <td>
-                <i class="fa-regular fa-trash-can" data-id="${allproduct[id].id}"></i>
-            </td>
-            <td>
-                <img src="${allproduct[id].img}">
-            </td>
-            <td>
-                <h4>${allproduct[id].name}</h4>
-            </td>
-            <td>
-                <h4>$${allproduct[id].price}</h4>
-            </td>
-            <td>
-                <input type="number" value="1" min="1" class="amount-input" data-id="${allproduct[id].id}">
-            </td>
-            <td>
-                <h4 class="total-price">$${allproduct[id].price}</h4>
-            </td>
-        </tr>`;
+                    <td>
+                        <i class="fa-regular fa-trash-can" data-id="${allproduct[id].id}"></i>
+                    </td>
+                    <td>
+                        <img src="${allproduct[id].img}">
+                    </td>
+                    <td>
+                        <h4>${allproduct[id].name}</h4>
+                    </td>
+                    <td>
+                        <h4>$${allproduct[id].price}</h4>
+                    </td>
+                    <td>
+                        <input type="number" value="1" min="1" class="amount-input" data-id="${allproduct[id].id}">
+                    </td>
+                    <td>
+                        <h4 class="total-price">$${allproduct[id].price}</h4>
+                    </td>
+                 </tr>`;
 
             // جلب عربة التسوق الحالية من localStorage أو تهيئتها
             let cart = JSON.parse(localStorage.getItem('cart')) || [];
@@ -152,7 +152,7 @@ function loadCart() {
 
     cart.forEach(product => {
         tbody.innerHTML += `
-           <tr id="product-${product.id}">
+            <tr id="product-${product.id}">
                 <td>
                     <i class="fa-regular fa-trash-can" onclick="deleteFromCart(${product.id})"></i>
                 </td>
@@ -173,13 +173,13 @@ function loadCart() {
                 </td>
             </tr>`;
     });
-document.querySelectorAll('.amount-input').forEach(input => {
+
+    document.querySelectorAll('.amount-input').forEach(input => {
         input.addEventListener('change', (e) => {
             const id = parseInt(e.target.dataset.id);
             updateTotalPrice(id);
         });
-    });  
-
+    });
 }
 // Function to delete an item from the cart
 function deleteFromCart(id) {
