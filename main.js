@@ -11,15 +11,7 @@ let allProduct = [];
 
 
 // تغيير لون المنتج
-let activeImage = document.querySelector('.product .images .active');
 
-function changeColor(newImage) {
-    if (activeImage) {
-        activeImage.src = newImage;
-    } else {
-        console.error('عنصر الصورة النشط غير موجود');
-    }
-}
 function openProduct(id) {
    activeProductDetails.innerHTML =`
 		<!-- ======================start product====================== -->
@@ -55,8 +47,6 @@ function openProduct(id) {
 		<!-- ======================end product====================== -->
 		
 `;
-console.log(id)
-console.log(allproduct[id])
 }
 
 // عناصر الألوان
@@ -67,3 +57,12 @@ let activeFour = document.querySelector('#farag .container .images .color-produc
 let activeDetails = document.querySelector('#farag .container .images .info p');
 let activeProductDetails = document.querySelector('.contentOfPage');
 
+let activeImage = document.querySelector('.product .images .active');
+
+function changeColor(newImage) {
+    if (activeImage) {
+        activeImage.src = newImage;
+    } else {
+        console.error('عنصر الصورة النشط غير موجود');
+    }
+}
