@@ -1,6 +1,21 @@
 [
 	{
 	  "id": 0,
+	  "img": "img/shop/24.jpg",
+	  "name": "Men's Fashion T-Shirt",
+	  "category": "Men / T-Shirt",
+	  "price": 139.00,
+	  "section" : "shop",
+	  "ProductDetails": "The Gildan Ultra Cotton T-shirt is made from a substantial 6.0 oz. per sq.",
+	  "productColors": [
+		"img/shop/1.jpg",
+		"img/shop/1.jpg",
+		"img/shop/1.jpg",
+		"img/shop/1.jpg"
+	  ]
+	},
+	{
+	  "id": 1,
 	  "img": "img/shop/1.jpg",
 	  "name": "Men's Fashion T-Shirt",
 	  "category": "Men / T-Shirt",
