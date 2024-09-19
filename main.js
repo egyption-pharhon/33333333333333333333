@@ -203,7 +203,8 @@ function updateTotalPrice(id) {
     const price = allproduct.find(product => product.id === id).price;
     const totalPriceElement = document.querySelector(`#product-${id} .total-price`);
     totalPriceElement.innerText = `$${(input.value * price).toFixed(2)}`;
-	totalofall += parseInt((input.value * price).toFixed(2))
+	totalofall += parseInt(input.value)
+	console.log(totalofall)
 }
 // لاستدعاء loadCart عند تحميل الصفحة
 window.onload = loadCart;
