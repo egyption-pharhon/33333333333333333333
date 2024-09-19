@@ -98,6 +98,7 @@ function changeColor(newImage){
 }
 
 // add product to cart
+
 function addToCart(id) {
     fetch('cart.html')
         .then(response => response.text())
@@ -109,7 +110,6 @@ function addToCart(id) {
             // Query for the element in the parsed document
             const elementInCart = doc.querySelector('.cart table tbody');
             console.log(elementInCart); // Check if the element exists
-
             // إضافة المنتج إلى واجهة المستخدم
             elementInCart.innerHTML += `
                 <tr id="product-${allproduct[id].id}">
@@ -126,7 +126,7 @@ function addToCart(id) {
                         <h4>$${ allproduct[id].price}</h4>
                     </td>
                     <td>
-                         <input type="number" value="1" min="1" class="amount-input" data-id="${allproduct[id].id}">
+                      <input type="number" value="1" min="1" data-id="${allproduct[id].id}">
                     </td>
                     <td>
                         <h4>$${ allproduct[id].price}</h4>
@@ -139,7 +139,7 @@ function addToCart(id) {
             cart.push(allproduct[id]);
             // تحديث localStorage
             localStorage.setItem('cart', JSON.stringify(cart));
-
+	updateTotalPrice()
         })
         .catch(error => {
             console.error('Error fetching cart:', error);
@@ -150,7 +150,6 @@ function addToCart(id) {
 function loadCart() {
     const cart = JSON.parse(localStorage.getItem('cart')) || [];
     const tbody = document.querySelector('.cart table tbody');
-
     cart.forEach(product => {
         tbody.innerHTML += `
             <tr id="product-${product.id}">
@@ -167,18 +166,12 @@ function loadCart() {
                     <h4>$${product.price}</h4>
                 </td>
                 <td>
-                    <input type="number" value="1" min="1" class="amount-input" data-id="${product.id}">
+                    <input type="number" value="1" min="1" data-id="${product.id}">
                 </td>
                 <td>
-                    <h4>$${product.price}</h4>
+                    <h4 class="total-price">$${ product.price}</h4>
                 </td>
             </tr>`;
-    });
-    document.querySelectorAll('.amount-input').forEach(input => {
-        input.addEventListener('change', (e) => {
-            const id = parseInt(e.target.dataset.id);
-            updateTotalPrice(id);
-        });
     });
 }
 // Function to delete an item from the cart
@@ -196,35 +189,12 @@ function deleteFromCart(id) {
         row.remove(); // Remove the row from the table
     }
 }
-
 function updateTotalPrice(id) {
-    const input = document.querySelector(`.amount-input[data-id="${id}"]`);
+    const input = document.querySelector(`.cart input[type="number"][data-id="${id}"]`);
     const price = allproduct[id].price;
-
-    // تحقق من وجود input
-    if (!input) {
-        console.error(`Input not found for id: ${id}`);
-        return;
-    }
-
     const totalPriceElement = document.querySelector(`#product-${id} .total-price`);
-
-    // تحقق من وجود totalPriceElement
-    if (!totalPriceElement) {
-        console.error(`Total price element not found for id: ${id}`);
-        return;
-    }
-
     totalPriceElement.innerText = `$${(input.value * price).toFixed(2)}`;
-    
-    // إعادة حساب المجموع
-    totalofall = 0; // إعادة تعيين المجموع
-    document.querySelectorAll('.amount-input').forEach(input => {
-        totalofall += (input.value * allproduct[parseInt(input.dataset.id)].price);
-    });
-    console.log(totalofall); // طباعة المجموع الإجمالي
 }
-
 // لاستدعاء loadCart عند تحميل الصفحة
 window.onload = loadCart;
 
