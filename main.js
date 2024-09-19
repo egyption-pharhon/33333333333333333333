@@ -10,7 +10,7 @@ let allProduct = [];
 // فتح تفاصيل المنتج
 function openProduct(id) {
             productDetails(id);
-      
+      	console.log( allProduct[id])
 }
 
 // تغيير لون المنتج
@@ -31,7 +31,7 @@ let activeThree = document.querySelector('#farag .container .images .color-produ
 let activeFour = document.querySelector('#farag .container .images .color-product #four');
 let activeDetails = document.querySelector('#farag .container .images .info p');
 let activeProductDetails = document.querySelector('body');
-	console.log( allProduct[id])
+
 function productDetails(id) {
     
 
