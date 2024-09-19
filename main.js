@@ -149,7 +149,7 @@ let activeTwo = document.querySelector('#farag .container .images .color-product
 let activeThree = document.querySelector('#farag .container .images .color-product #three');
 let activeFour = document.querySelector('#farag .container .images .color-product #four');
 let activeDetails = document.querySelector('#farag .container .images .info p');
-let activeProductDetails = document.querySelector('body');
+let activeProductDetails = document.querySelector('.contentOfPage');
 
 function productDetails(id) {
     
