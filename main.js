@@ -131,8 +131,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 //     console.error('العنصر .cart table tbody غير موجود في الصفحة.');
                 // }
             })
-            .catch(error => console.error('خطأ:', error));
-    }
+    //         .catch(error => console.error('خطأ:', error));
+    // }
     
     // أضف حدث الزر
 	console.log(document.getElementById('addElement'))
