@@ -5,52 +5,15 @@ function openNavList(){
 	navlist.classList.toggle("show");
 }
 
-// open details of product
-let allproduct =[]
+// general variables in functions
 
+let allproduct =[]
 let activeImage;
 let featureProduct;
 let totalOfAllProductInCart = 0;
 let shipping = 35;
 let activeProductDetails = document.querySelector('.contentOfPage')
 
-
-// product in webpage
-function addproducts(fileName, locationOfProducts){
-	fetch('product.json')
-			.then(response => response.json())
-			.then(data => {
-				const products = document.querySelector(locationOfProducts);
-				allproduct =data;
-				data.forEach( product => {
-					if(product.section === fileName){
-					products.innerHTML += `
-						<div class="box">
-							<div class="image">
-								<img src="${product.img}">
-							</div>
-							<div class="stars">
-								<i class="fas fa-star"></i>
-								<i class="fas fa-star"></i>
-								<i class="fas fa-star"></i>
-								<i class="fas fa-star"></i>
-								<i class="fas fa-star"></i>
-							</div>
-							<p onclick="openProduct(${product.id})" product-id="${product.id}">${product.name}</p>
-							<span>$${product.price}</span>
-							<button onclick="addToCart(${product.id})">Add Cart</button>
-						</div>`
-				}else{
-					console.log("erro")	
-					}
-				})
-			})
-}
-addproducts('shop', '.shop .content');
-addproducts('Featured', '.featured .content');
-addproducts('Dresses', '.dresses-jumpsuits .content');
-addproducts('Shoes', '.shoes .content');
-	
 // open details of product
 function openProduct(id) {
     activeProductDetails.innerHTML =`
@@ -78,7 +41,7 @@ function openProduct(id) {
                             <option>Large</option>
                         </select>
                         <input type="number" value="1">
-                        <button  onclick="addToCart(${product.id})">Add to Cart</button>
+                        <button id="addElement">Add to Cart</button>
                         <h4>Product Details</h4>
                         <p>${ allproduct[id].ProductDetails}</p>
                     </div>
@@ -124,7 +87,7 @@ function openProduct(id) {
 									</div>
 									<p onclick="openProduct(${product.id})" product-id="${product.id}">${product.name}</p>
 									<span>$${product.price}</span>
-									<button onclick="addToCart(${product.id})">Add Cart</button>
+									<button id="addElement">Add Cart</button>
 								</div>`
 						}
 					})
@@ -231,7 +194,6 @@ function deleteFromCart(id) {
 }
 
 function updateTotalPrice(id) {
-	totalOfAllProductInCart = 0;
     const input = document.querySelector(`.amount-input[data-id="${id}"]`);
     const price = allproduct[id].price;
     const totalPriceElement = document.querySelector(`#product-${id} .total-price`);
@@ -242,6 +204,8 @@ function updateTotalPrice(id) {
 }
 
 function totalOfAllProducts() {
+    totalOfAllProductInCart = 0;
+    
     const inputs = document.querySelectorAll('.amount-input');
     
     inputs.forEach(input => {
