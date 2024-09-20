@@ -12,6 +12,8 @@ let activeImage;
 let featureProduct;
 let totalOfAllProductInCart = 0;
 let shipping = 35;
+
+
 let activeProductDetails = document.querySelector('.contentOfPage')
 
 
