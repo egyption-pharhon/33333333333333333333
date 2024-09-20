@@ -231,6 +231,7 @@ function deleteFromCart(id) {
 }
 
 function updateTotalPrice(id) {
+	totalOfAllProductInCart = 0;
     const input = document.querySelector(`.amount-input[data-id="${id}"]`);
     const price = allproduct[id].price;
     const totalPriceElement = document.querySelector(`#product-${id} .total-price`);
